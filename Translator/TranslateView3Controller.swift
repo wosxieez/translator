@@ -49,11 +49,15 @@ class TranslateView3Controller: UIViewController, AVCapturePhotoCaptureDelegate
                 try videoDevice?.lockForConfiguration();
                 if (_isTorchOn)
                 {
-                    videoDevice?.torchMode = .on;
+                    if videoDevice != nil &&  videoDevice!.isTorchModeSupported(.on) {
+                        videoDevice!.torchMode = .on;
+                    }
                 }
                 else
                 {
-                    videoDevice?.torchMode = .off;
+                    if videoDevice != nil &&  videoDevice!.isTorchModeSupported(.off) {
+                        videoDevice!.torchMode = .off
+                    }
                 }
                 videoDevice?.unlockForConfiguration();
             }
