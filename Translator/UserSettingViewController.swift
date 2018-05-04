@@ -14,6 +14,8 @@ class UserSettingViewController: UITableViewController {
     var tableHeaderImageView: UIImageView!
     var tableHeaderIconImageView: UIImageView!
     var usernameLabel: UILabel!
+    var isTimerRunning = false
+    var headImageTapCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +23,14 @@ class UserSettingViewController: UITableViewController {
         if let tableHeaderImage = UIImage(named: "userSettingTopBg") {
             let tableHeaderView = UIView()
             tableHeaderView.frame.size.width = view.frame.width
-            tableHeaderView.frame.size.height = view.frame.width * tableHeaderImage.size.height /
-                tableHeaderImage.size.width
+            tableHeaderView.frame.size.height = view.frame.width * tableHeaderImage.size.height / tableHeaderImage.size.width
             tableView.tableHeaderView = tableHeaderView
             
             tableHeaderImageView = UIImageView(image: tableHeaderImage)
             tableHeaderImageView.frame = tableHeaderView.bounds
             tableHeaderImageView.frame.origin = CGPoint(x: 0, y: 0)
+            tableHeaderImageView.isUserInteractionEnabled = true
+            tableHeaderImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(headImageTapAction)))
             tableHeaderView.addSubview(tableHeaderImageView)
             
             tableHeaderIconImageView = UIImageView(image: UIImage(named: AppUtil.sex == "F" ? "userSettingFemaleIcon" : "userSettingMaleIcon"))
@@ -78,6 +81,23 @@ class UserSettingViewController: UITableViewController {
     func openPickerView() {
         let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
         present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc func headImageTapAction() {
+        if isTimerRunning {
+            headImageTapCount += 1
+        } else {
+            isTimerRunning = true
+            headImageTapCount = 1
+            perform(#selector(onTimerAction), with: nil, afterDelay: 2)
+        }
+    }
+    
+    @objc func onTimerAction() {
+        isTimerRunning = false
+        if headImageTapCount >= 6 {
+            NotificationCenter.default.post(name: Notification.Name("showTranslateViewController"), object: nil)
+        }
     }
     
 }

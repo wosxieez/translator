@@ -12,10 +12,15 @@ class AppTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(showTranslateViewController), name: Notification.Name("showTranslateViewController"), object: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    @objc func showTranslateViewController() {
+        if viewControllers!.count < 3 {
+            viewControllers?.insert(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "translateVC"), at: 1)
+            selectedIndex = 1
+        }
     }
 
 }
