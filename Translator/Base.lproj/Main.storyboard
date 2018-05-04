@@ -216,7 +216,7 @@
         <!--MainViewController-->
         <scene sceneID="UeA-qS-C5b">
             <objects>
-                <tabBarController storyboardIdentifier="mainViewController" id="s38-OY-rUb" userLabel="MainViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainViewController" id="s38-OY-rUb" userLabel="MainViewController" customClass="AppTabBarController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="Oj7-QT-OZt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -769,7 +769,7 @@
         <image name="translateIcon" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HC9-PS-wyP"/>
-        <segue reference="imi-g9-Qfd"/>
+        <segue reference="Plj-6i-6kq"/>
+        <segue reference="NX8-YE-AIg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,7 +21,8 @@ class UserSettingViewController: UITableViewController {
         if let tableHeaderImage = UIImage(named: "userSettingTopBg") {
             let tableHeaderView = UIView()
             tableHeaderView.frame.size.width = view.frame.width
-            tableHeaderView.frame.size.height = view.frame.width * tableHeaderImage.size.height / tableHeaderImage.size.width
+            tableHeaderView.frame.size.height = view.frame.width * tableHeaderImage.size.height /
+                tableHeaderImage.size.width
             tableView.tableHeaderView = tableHeaderView
             
             tableHeaderImageView = UIImageView(image: tableHeaderImage)

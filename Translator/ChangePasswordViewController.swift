@@ -54,20 +54,15 @@ class ChangePasswordViewController: UIViewController {
             return;
         }
         
-        AppService.getInstance().changePassword(username: AppUtil.username, oldPassword: AppUtil.password,
-                                                newPassword: newPasswordInput1.text, completionHandler: changePasswordHandler);
+        AppService.getInstance().changePassword(username: AppUtil.username, oldPassword: AppUtil.password, newPassword: newPasswordInput1.text, completionHandler: changePasswordHandler);
     }
     
-    func changePasswordHandler(data:Data?, response:URLResponse?, error:Error?) -> Void
-    {
-        if (data != nil)
-        {
+    func changePasswordHandler(data:Data?, response:URLResponse?, error:Error?) {
+        if data != nil {
             let jsonObject = try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves);
             let jsonDic:[String: Any]? = jsonObject as? [String: Any];
-            if (jsonDic != nil)
-            {
-                if (jsonDic!["resultCode"] as? String == "00")
-                {
+            if (jsonDic != nil) {
+                if (jsonDic!["resultCode"] as? String == "00") {
                     // 密码修改成功
                     DispatchQueue.main.async {
                         AppUtil.password = self.newPasswordInput1.text;
@@ -76,9 +71,7 @@ class ChangePasswordViewController: UIViewController {
                         self.newPasswordInput2.text = "";
                         self.navigationController?.popViewController(animated: true);
                     }
-                }
-                else
-                {
+                } else {
                     DispatchQueue.main.async {
                         Toast.show(message: jsonDic!["resultMsg"] as? String);
                     }

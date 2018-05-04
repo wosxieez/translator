@@ -101,8 +101,7 @@ extension AppNavigationController: TBSocketSessionDelegate {
                         tbSocketSession.sendMessage(message: message)
                         cachedMessage = nil
                     }
-                case "1":
-                    // 登录失败,账号在其他地方登录
+                case "1": // 登录失败,账号在其他地方登录
                     DispatchQueue.main.async {
                         Toast.show(message: content["resultMsg"] as? String, delayCloseTime: 3)
                         self.popViewController(animated: true)
