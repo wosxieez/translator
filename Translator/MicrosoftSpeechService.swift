@@ -64,19 +64,15 @@ class MicrosoftSpeechService: WebSocketDelegate {
     
     func connectMicrosoftService() -> Void {
         print("连接微软服务...")
-        let url = URL(string: "wss://dev.microsofttranslator.com/speech/translate?from=" + AppUtil.sourceLanguage.streamCode!  + "&to=" + AppUtil.targetLanguage.streamCode! + "&features=partial&api-version=1.0")
-        serviceSocket = WebSocket(url: url!)
-        serviceSocket?.headers["Authorization"] = "Bearer " + serviceToken
-        serviceSocket?.headers["X-ClientAppId"] = "{ea66703d-90a8-436b-9bd6-7a2707a2ad99}"  // ANY IDENTIFIER
-        serviceSocket?.headers["X-CorrelationId"] = "213091F1CF4aaD"    // ANY VALUE
-        serviceSocket?.delegate = self
-        serviceSocket?.connect()
-    }
-    
-    func websocketDidConnect(socket: WebSocket) {
-        print("连接微软服务...连接")
-        isEnabled = true
-        delegate?.didConnect()
+        if let url = URL(string: "wss://dev.microsofttranslator.com/speech/translate?from=" + AppUtil.sourceLanguage.streamCode!  + "&to=" + AppUtil.targetLanguage.streamCode! + "&features=partial&api-version=1.0") {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.setValue("Bearer " + serviceToken, forHTTPHeaderField: "Authorization")
+            urlRequest.setValue("{ea66703d-90a8-436b-9bd6-7a2707a2ad99}", forHTTPHeaderField: "X-ClientAppId")
+            urlRequest.setValue("213091F1CF4aaD", forHTTPHeaderField: "X-CorrelationId")
+            serviceSocket = WebSocket(request: urlRequest)
+            serviceSocket?.delegate = self
+            serviceSocket?.connect()
+        }
     }
     
     func send(data: Data) {
@@ -86,17 +82,23 @@ class MicrosoftSpeechService: WebSocketDelegate {
         }
     }
     
-    func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("连接微软服务...连接")
+        isEnabled = true
+        delegate?.didConnect()
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
         print("微软服务...断开")
         delegate?.didDisConnect()
     }
     
-    func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         print("messa", text)
         delegate?.receive(message: text)
     }
     
-    func websocketDidReceiveData(socket: WebSocket, data: Data) {
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         print("接收音频数据返回")
     }
     

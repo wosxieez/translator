@@ -1,10 +1,10 @@
 PODS:
-  - IQKeyboardManagerSwift (6.0.0)
-  - Starscream (2.0.4)
+  - IQKeyboardManagerSwift (6.0.2)
+  - Starscream (3.0.5)
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
-  - Starscream (~> 2.0.3)
+  - Starscream
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
-  IQKeyboardManagerSwift: 624f128983eec795deacd50c1cd2f72664d13f08
-  Starscream: df5974ee928b157c8eda8af8de7c620276b7dfcc
+  IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: 0e1f432691d2acb4191c6ccdc0ab3dbfe732dbca
+PODFILE CHECKSUM: 1bc9b93e7abf0550d946e4648cafe0ed7b6cc34b
 
 COCOAPODS: 1.5.0
