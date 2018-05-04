@@ -25,6 +25,7 @@
 		CC36352D1FA80AB700B118D9 /* TranslateView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */; };
 		CC3635361FA8655F00B118D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8A81E1F7BAD52001AD700 /* AudioToolbox.framework */; };
 		CC3DD0D820732F9F00D03950 /* FindPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */; };
+		CC43DC26209C347700D46E25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC43DC28209C347700D46E25 /* Localizable.strings */; };
 		CC4772B81F95B7350010DA18 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */; };
 		CC49BD01207AFE0A0056600C /* DeviceWifiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */; };
 		CC55D8AF2071D94C00F70D84 /* UserSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC55D8AE2071D94C00F70D84 /* UserSetting.storyboard */; };
@@ -131,6 +132,12 @@
 		CC303BFD206B66BA008CADA4 /* TBSocketSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSocketSession.swift; sourceTree = "<group>"; };
 		CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView3Controller.swift; sourceTree = "<group>"; };
 		CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindPassword.storyboard; sourceTree = "<group>"; };
+		CC43DC27209C347700D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CC43DC29209C354B00D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "../zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		CC43DC2A209C354B00D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CC43DC2B209C35BE00D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = ../en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC43DC2D209C38C400D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Main.strings; sourceTree = "<group>"; };
+		CC43DC2F209C38C600D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWifiListViewController.swift; sourceTree = "<group>"; };
 		CC55D8AE2071D94C00F70D84 /* UserSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSetting.storyboard; sourceTree = "<group>"; };
@@ -190,7 +197,6 @@
 		CCC8A7DB1F7BAB7F001AD700 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		CCC8A7DC1F7BAB7F001AD700 /* AppUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtil.swift; sourceTree = "<group>"; };
 		CCC8A7DD1F7BAB7F001AD700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CCC8A7E01F7BAB7F001AD700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCC8A7E21F7BAB7F001AD700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		CCC8A7E51F7BAB7F001AD700 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		CCC8A7E61F7BAB7F001AD700 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
@@ -409,6 +415,7 @@
 				CCC8A7F01F7BAB7F001AD700 /* AppNavigationController.swift */,
 				CCC8A7EF1F7BAB7F001AD700 /* Translator-Bridging-Header.h */,
 				CCC8A7E71F7BAB7F001AD700 /* Info.plist */,
+				CC43DC28209C347700D46E25 /* Localizable.strings */,
 				CCC8A7DD1F7BAB7F001AD700 /* Assets.xcassets */,
 				CC303BFB206B44BF008CADA4 /* Core */,
 				CCF3AD4A1FB3006300C9EBCA /* Login */,
@@ -578,6 +585,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = CCC8A7BA1F7BAB2F001AD700;
 			productRefGroup = CCC8A7C41F7BAB2F001AD700 /* Products */;
@@ -604,6 +612,7 @@
 				CC55D8AF2071D94C00F70D84 /* UserSetting.storyboard in Resources */,
 				CCF21B9A207C9CE500F3CD36 /* device_top_icon_online.png in Resources */,
 				CCE9FF6520766C860061B186 /* Register.storyboard in Resources */,
+				CC43DC26209C347700D46E25 /* Localizable.strings in Resources */,
 				CC8AD34C20622D5F00459311 /* gender_selected.png in Resources */,
 				CCC8A8001F7BAB7F001AD700 /* LaunchScreen.storyboard in Resources */,
 				CC2A56F6205518B400875B4D /* device_wifi_clear.png in Resources */,
@@ -733,10 +742,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CC43DC28209C347700D46E25 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC43DC27209C347700D46E25 /* en */,
+				CC43DC2A209C354B00D46E25 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CCC8A7DF1F7BAB7F001AD700 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CCC8A7E01F7BAB7F001AD700 /* Base */,
+				CC43DC29209C354B00D46E25 /* zh-Hans */,
+				CC43DC2B209C35BE00D46E25 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			path = Base.lproj;
@@ -746,6 +765,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CCC8A7E21F7BAB7F001AD700 /* Base */,
+				CC43DC2D209C38C400D46E25 /* en */,
+				CC43DC2F209C38C600D46E25 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			path = Base.lproj;
@@ -758,6 +779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -817,6 +839,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

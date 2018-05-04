@@ -1,0 +1,75 @@
+
+/* Class = "UINavigationItem"; title = "拍照翻译"; ObjectID = "6qv-bM-zVd"; */
+"6qv-bM-zVd.title" = "拍照翻译";
+
+/* Class = "UINavigationItem"; title = "文本翻译"; ObjectID = "A98-VH-wSN"; */
+"A98-VH-wSN.title" = "文本翻译";
+
+/* Class = "UILabel"; text = "欢迎使用"; ObjectID = "AIt-lz-SxC"; */
+"AIt-lz-SxC.text" = "Welcome";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "B98-Lv-Ezj"; */
+"B98-Lv-Ezj.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "中文"; ObjectID = "Cex-7y-ojU"; */
+"Cex-7y-ojU.normalTitle" = "中文";
+
+/* Class = "UITextField"; placeholder = "输入手机号码"; ObjectID = "FYk-2k-YGs"; */
+"FYk-2k-YGs.placeholder" = "Phone number";
+
+/* Class = "UIButton"; normalTitle = "英文"; ObjectID = "Fbm-fm-P7Q"; */
+"Fbm-fm-P7Q.normalTitle" = "英文";
+
+/* Class = "UINavigationItem"; title = "登录"; ObjectID = "FgQ-0Q-cdz"; */
+"FgQ-0Q-cdz.title" = "登录";
+
+/* Class = "UIButton"; normalTitle = "找回密码"; ObjectID = "IW9-Gi-4tt"; */
+"IW9-Gi-4tt.normalTitle" = "Forgot password";
+
+/* Class = "UITextField"; placeholder = "输入密码"; ObjectID = "KDX-4c-hZA"; */
+"KDX-4c-hZA.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "按下翻译"; ObjectID = "PP9-tS-WHU"; */
+"PP9-tS-WHU.normalTitle" = "按下翻译";
+
+/* Class = "UINavigationItem"; title = "语音翻译"; ObjectID = "RBz-Ra-LV9"; */
+"RBz-Ra-LV9.title" = "语音翻译";
+
+/* Class = "UINavigationItem"; title = "源语言"; ObjectID = "U70-wb-Xbl"; */
+"U70-wb-Xbl.title" = "源语言";
+
+/* Class = "UILabel"; text = "百国通"; ObjectID = "ZAh-Nf-z83"; */
+"ZAh-Nf-z83.text" = "back";
+
+/* Class = "UIButton"; normalTitle = "中文"; ObjectID = "awD-fY-vb4"; */
+"awD-fY-vb4.normalTitle" = "中文";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "eRO-7J-x8F"; */
+"eRO-7J-x8F.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "注册用户"; ObjectID = "ktB-gV-LwI"; */
+"ktB-gV-LwI.normalTitle" = "Sign up";
+
+/* Class = "UIButton"; normalTitle = "中文"; ObjectID = "mIZ-oE-hdQ"; */
+"mIZ-oE-hdQ.normalTitle" = "中文";
+
+/* Class = "UITabBarItem"; title = "翻译"; ObjectID = "nvF-tj-g77"; */
+"nvF-tj-g77.title" = "翻译";
+
+/* Class = "UIButton"; normalTitle = "英文"; ObjectID = "qqK-eS-OGv"; */
+"qqK-eS-OGv.normalTitle" = "英文";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "sLn-zI-fLL"; */
+"sLn-zI-fLL.normalTitle" = "Login";
+
+/* Class = "UINavigationItem"; title = "目标语言"; ObjectID = "sR3-MW-L9a"; */
+"sR3-MW-L9a.title" = "目标语言";
+
+/* Class = "UIButton"; normalTitle = "按下翻译"; ObjectID = "txX-lZ-ntu"; */
+"txX-lZ-ntu.normalTitle" = "按下翻译";
+
+/* Class = "UIBarButtonItem"; title = "返回"; ObjectID = "uhq-Mc-Djs"; */
+"uhq-Mc-Djs.title" = "返回";
+
+/* Class = "UIButton"; normalTitle = "英文"; ObjectID = "vzW-v1-ImI"; */
+"vzW-v1-ImI.normalTitle" = "英文";
