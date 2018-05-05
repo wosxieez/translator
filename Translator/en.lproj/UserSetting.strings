@@ -1,54 +1,54 @@
 
 /* Class = "UILabel"; text = "确认新密码"; ObjectID = "00g-b7-SgI"; */
-"00g-b7-SgI.text" = "确认新密码";
+"00g-b7-SgI.text" = "Confirm Password";
 
 /* Class = "UILabel"; text = "旧密码"; ObjectID = "0ZI-Gy-dSb"; */
-"0ZI-Gy-dSb.text" = "旧密码";
+"0ZI-Gy-dSb.text" = "Old Password";
 
 /* Class = "UIButton"; normalTitle = "确定"; ObjectID = "3Ts-j8-FC8"; */
-"3Ts-j8-FC8.normalTitle" = "确定";
+"3Ts-j8-FC8.normalTitle" = "Ok";
 
 /* Class = "UILabel"; text = "密码修改"; ObjectID = "7Qg-N5-ykN"; */
-"7Qg-N5-ykN.text" = "密码修改";
+"7Qg-N5-ykN.text" = "Reset Password";
 
 /* Class = "UITextField"; placeholder = "输入6-16位字符"; ObjectID = "7lF-iO-PZO"; */
-"7lF-iO-PZO.placeholder" = "输入6-16位字符";
+"7lF-iO-PZO.placeholder" = "Input 6-16 Characters";
 
 /* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "8Ss-qN-k95"; */
-"8Ss-qN-k95.placeholder" = "请输入旧密码";
+"8Ss-qN-k95.placeholder" = "Input Old Password";
 
 /* Class = "UILabel"; text = "当前版本 V1.0.0"; ObjectID = "8dg-Nq-dy4"; */
-"8dg-Nq-dy4.text" = "当前版本 V1.0.0";
+"8dg-Nq-dy4.text" = "Current Version: V1.0.0";
 
 /* Class = "UILabel"; text = "密码修改"; ObjectID = "8yk-KN-zit"; */
-"8yk-KN-zit.text" = "密码修改";
+"8yk-KN-zit.text" = "Reset Password";
 
 /* Class = "UILabel"; text = "百国通"; ObjectID = "Fz9-Js-NSg"; */
-"Fz9-Js-NSg.text" = "百国通";
+"Fz9-Js-NSg.text" = "BaiGuoTong";
 
 /* Class = "UILabel"; text = "关于我们"; ObjectID = "Kjz-L3-qwK"; */
-"Kjz-L3-qwK.text" = "关于我们";
+"Kjz-L3-qwK.text" = "About";
 
 /* Class = "UILabel"; text = "性别"; ObjectID = "M3F-7U-byV"; */
-"M3F-7U-byV.text" = "性别";
+"M3F-7U-byV.text" = "Gender";
 
 /* Class = "UITextField"; placeholder = "将新密码再输入一次"; ObjectID = "S9v-pO-fvR"; */
-"S9v-pO-fvR.placeholder" = "将新密码再输入一次";
+"S9v-pO-fvR.placeholder" = "Confirm New Password";
 
 /* Class = "UITabBarItem"; title = "我的"; ObjectID = "Uhj-jz-UnE"; */
 "Uhj-jz-UnE.title" = "Me";
 
 /* Class = "UILabel"; text = "新密码"; ObjectID = "kPz-JL-cf8"; */
-"kPz-JL-cf8.text" = "新密码";
+"kPz-JL-cf8.text" = "New Password";
 
 /* Class = "UILabel"; text = "关于我们"; ObjectID = "loM-RI-FvJ"; */
-"loM-RI-FvJ.text" = "关于我们";
+"loM-RI-FvJ.text" = "About";
 
 /* Class = "UILabel"; text = "上海棠宝机器人公司出品"; ObjectID = "o39-9n-eqT"; */
 "o39-9n-eqT.text" = "上海棠宝机器人公司出品";
 
 /* Class = "UILabel"; text = "男"; ObjectID = "rKb-ZF-zDK"; */
-"rKb-ZF-zDK.text" = "男";
+"rKb-ZF-zDK.text" = "Male";
 
 /* Class = "UILabel"; text = "退出登录"; ObjectID = "xqH-4z-ESq"; */
-"xqH-4z-ESq.text" = "退出登录";
+"xqH-4z-ESq.text" = "Log Out";

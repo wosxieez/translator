@@ -10,6 +10,7 @@
 		017B5429005E5FF55BCBF1A9 /* Pods_Translator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61A168902975FD1B3707D9 /* Pods_Translator.framework */; };
 		CC08C512206111660055F329 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C510206111660055F329 /* male.png */; };
 		CC08C513206111660055F329 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C511206111660055F329 /* female.png */; };
+		CC14D2DC209D576C005B37BA /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14D2DB209D576C005B37BA /* Localizable.swift */; };
 		CC1877D4204CDE1200495412 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1877D3204CDE1200495412 /* Device.storyboard */; };
 		CC1877D6204CDF2500495412 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */; };
 		CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1877D7204CE52400495412 /* add_device_top_bg.png */; };
@@ -118,6 +119,7 @@
 		CA61A168902975FD1B3707D9 /* Pods_Translator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC08C510206111660055F329 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		CC08C511206111660055F329 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
+		CC14D2DB209D576C005B37BA /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		CC1877D3204CDE1200495412 /* Device.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		CC1877D7204CE52400495412 /* add_device_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_device_top_bg.png; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				CCC8A7DB1F7BAB7F001AD700 /* AppService.swift */,
 				CCC8A7DC1F7BAB7F001AD700 /* AppUtil.swift */,
 				CCD365EE20898BC10046C1A3 /* AppNotification.swift */,
+				CC14D2DB209D576C005B37BA /* Localizable.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				CC596B501FBAF26A00DDE288 /* ESP_CRC8.m in Sources */,
 				CCB54E311FAAB9E500CF1CA1 /* TranslateTableViewCell.swift in Sources */,
 				CCC8A80F1F7BAB7F001AD700 /* RegisterViewController.swift in Sources */,
+				CC14D2DC209D576C005B37BA /* Localizable.swift in Sources */,
 				CC596B701FBAF2BD00DDE288 /* ESPDatumCode.m in Sources */,
 				CC67DF951FB57CF1006B8106 /* TranslateView1.swift in Sources */,
 				CCC8A8171F7BAB7F001AD700 /* UserSettingViewController.swift in Sources */,

@@ -48,9 +48,9 @@ class UserSettingViewController: UITableViewController {
         }
         
         if AppUtil.sex == "F" {
-            sexViewCell.detailTextLabel?.text = "女"
+            sexViewCell.detailTextLabel?.text = "女".localizable()
         } else {
-            sexViewCell.detailTextLabel?.text = "男"
+            sexViewCell.detailTextLabel?.text = "男".localizable()
         }
     }
     

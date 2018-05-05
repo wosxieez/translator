@@ -19,7 +19,7 @@ class AboutMeViewController: UIViewController {
         
         let infoDic = Bundle.main.infoDictionary
         if let version = infoDic?["CFBundleShortVersionString"] as? String {
-            versionLabel.text = "当前版本：" + version
+            versionLabel.text = "当前版本:".localizable() + version
         }
     }
     
