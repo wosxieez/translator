@@ -186,8 +186,7 @@ class DeviceWifiSettingViewController: UIViewController {
 extension DeviceWifiSettingViewController: TBSocketSessionDelegate {
     func onConnect() {
         DispatchQueue.main.async {
-            let content = ["ssid": self.ssidTextFiled.text,
-                           "password": self.passwordTextField.text]
+            let content = ["ssid": self.ssidTextFiled.text, "password": self.passwordTextField.text, "username": AppUtil.username]
             let message = Message()
             message.type = "apConfig"
             message.content = content
