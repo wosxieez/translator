@@ -86,6 +86,10 @@ class UserSettingViewController: UITableViewController {
     @objc func headImageTapAction() {
         if isTimerRunning {
             headImageTapCount += 1
+            
+            if headImageTapCount >= 6 {
+                NotificationCenter.default.post(name: Notification.Name("showTranslateViewController"), object: nil)
+            }
         } else {
             isTimerRunning = true
             headImageTapCount = 1
@@ -95,9 +99,6 @@ class UserSettingViewController: UITableViewController {
     
     @objc func onTimerAction() {
         isTimerRunning = false
-        if headImageTapCount >= 6 {
-            NotificationCenter.default.post(name: Notification.Name("showTranslateViewController"), object: nil)
-        }
     }
     
 }

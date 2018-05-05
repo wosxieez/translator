@@ -93,21 +93,23 @@ class DeviceWifiSettingViewController: UIViewController {
             beganConfigDeviceWifiTip() // 开始配网提示
             prepareConfigDeviceWifi()
         } else {
-//            if #available(iOS 11.0, *) {
-//                beganConfigDeviceWifiTip() // 开始配网提示
-//                let hotspotConfig = NEHotspotConfiguration(ssid: "tangdi", passphrase: "12345678", isWEP: false)
-//                NEHotspotConfigurationManager.shared.apply(hotspotConfig) { (error) in
-//                    if AppUtil.getSSID() == "tangdi" {
-//                        self.prepareConfigDeviceWifi()
-//                    } else {
-//                        self.endConfigDeviceWifiTip(result: false) // 结束配网提示
-//                    }
-//                }
-//            } else {
-//                let ac = UIAlertController(title: "提示", message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678", preferredStyle: .alert)
-//                ac.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
-//                present(ac, animated: true, completion: nil)
-//            }
+            #if !DEBUG // DEBUG环境不编译下面代码
+            if #available(iOS 11.0, *) {
+                beganConfigDeviceWifiTip() // 开始配网提示
+                let hotspotConfig = NEHotspotConfiguration(ssid: "tangdi", passphrase: "12345678", isWEP: false)
+                NEHotspotConfigurationManager.shared.apply(hotspotConfig) { (error) in
+                    if AppUtil.getSSID() == "tangdi" {
+                        self.prepareConfigDeviceWifi()
+                    } else {
+                        self.endConfigDeviceWifiTip(result: false) // 结束配网提示
+                    }
+                }
+            } else {
+                let ac = UIAlertController(title: "提示", message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
+                present(ac, animated: true, completion: nil)
+            }
+            #endif
         }
     }
     
