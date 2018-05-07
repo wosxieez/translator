@@ -566,7 +566,7 @@
 				TargetAttributes = {
 					CCC8A7C21F7BAB2F001AD700 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = B2P4QMML46;
+						DevelopmentTeam = GXHRLU3QC8;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -920,7 +920,7 @@
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2P4QMML46;
+				DEVELOPMENT_TEAM = GXHRLU3QC8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -929,7 +929,7 @@
 				INFOPLIST_FILE = Translator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.greencloud.baiguoyi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tombot.bgt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -952,7 +952,7 @@
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B2P4QMML46;
+				DEVELOPMENT_TEAM = GXHRLU3QC8;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -961,7 +961,7 @@
 				INFOPLIST_FILE = Translator/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.greencloud.baiguoyi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tombot.bgt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
