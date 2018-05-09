@@ -22,7 +22,7 @@ class AddDeviceViewController: UIViewController {
         view.addSubview(configWifiButton)
         
         bindingButton.layer.cornerRadius = 25
-        bindingButton.setTitle("设备绑定", for: .normal)
+        bindingButton.setTitle("设备绑定".localizable(), for: .normal)
         bindingButton.backgroundColor = UIColor.clear
         bindingButton.setTitleColor(AppUtil.themeColor, for: .normal)
         bindingButton.layer.borderColor = AppUtil.themeColor.cgColor

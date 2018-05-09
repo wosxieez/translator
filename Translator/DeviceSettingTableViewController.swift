@@ -12,17 +12,17 @@ class DeviceSettingTableViewController: UITableViewController {
     
     var contentFlag = 0
     
-    let data0 = [["name": "10分钟", "icon": "deviceShutdownIcon10"],
-                 ["name": "20分钟", "icon": "deviceShutdownIcon20"],
-                 ["name": "30分钟", "icon": "deviceShutdownIcon30"]]
+    let data0 = [["name": "10" + "分钟".localizable(), "icon": "deviceShutdownIcon10"],
+                 ["name": "20" + "分钟".localizable(), "icon": "deviceShutdownIcon20"],
+                 ["name": "30" + "分钟".localizable(), "icon": "deviceShutdownIcon30"]]
     
-    let data1 = [["name": "5分钟", "icon": "deviceSleepIcon5"],
-                 ["name": "10分钟", "icon": "deviceSleepIcon10"],
-                 ["name": "15分钟", "icon": "deviceSleepIcon15"]]
+    let data1 = [["name": "5" + "分钟".localizable(), "icon": "deviceSleepIcon5"],
+                 ["name": "10" + "分钟".localizable(), "icon": "deviceSleepIcon10"],
+                 ["name": "15" + "分钟".localizable(), "icon": "deviceSleepIcon15"]]
     
-    let data2 = [["name": "10秒", "icon": "deviceRecordIcon5"],
-                 ["name": "15秒", "icon": "deviceRecordIcon10"],
-                 ["name": "30秒", "icon": "deviceRecordIcon15"]]
+    let data2 = [["name": "10" + "秒".localizable(), "icon": "deviceRecordIcon5"],
+                 ["name": "15" + "秒".localizable(), "icon": "deviceRecordIcon10"],
+                 ["name": "30" + "秒".localizable(), "icon": "deviceRecordIcon15"]]
     
     var contentData: [[String: String]] {
         get {
@@ -41,11 +41,11 @@ class DeviceSettingTableViewController: UITableViewController {
         get {
             switch contentFlag {
             case 1:
-                return "待机时间"
+                return "待机时间".localizable()
             case 2:
-                return "录音时长"
+                return "录音时长".localizable()
             default:
-                return "关机时间"
+                return "关机时间".localizable()
             }
         }
     }

@@ -7,3 +7,21 @@
 */
 "男" = "Male";
 "当前版本:" = "Current Version:";
+"设备设置" = "Device Setting";
+"设备绑定" = "Device Binding";
+"设置成功" = "Setting Success";
+"设置失败" = "Setting Failure";
+"在线" = "Online";
+"离线" = "Offline";
+"设备" = "Device";
+"无绑定设备" = "No Binding Device";
+"中文" = "Chinese";
+"英文" = "English";
+"设备离线" = "Device Offline";
+"无可用设备" = "Unavailable Device";
+"设备已被其他用户绑定" = "The device has binded by other user";
+"设备列表" = "Device List";
+"取消" = "Cancel";
+"确定" = "Ok";
+"固件更新" = "Device Software Update";
+"是否升级到最新版本: " = "Upgrade to the latest version: ";

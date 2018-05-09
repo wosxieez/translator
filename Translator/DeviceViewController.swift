@@ -87,11 +87,11 @@ class DeviceViewController: UIViewController {
                         case "setDeviceTime", "setSpeakTime", "setVoiceType", "setTransLanguage":
                             DispatchQueue.main.async {
                                 if deviceMessage["content"] as? String == "success" {
-                                    Toast.show(message: "设置成功")
+                                    Toast.show(message: "设置成功".localizable())
                                     // 设备设置成功 需要重新更新下设备信息
                                     NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 } else {
-                                    Toast.show(message: "设置失败")
+                                    Toast.show(message: "设置失败".localizable())
                                 }
                             }
                         default:
@@ -115,7 +115,7 @@ class DeviceViewController: UIViewController {
                 // 设备102018000307461b绑定到其他APP用户,需要重新更新下设备信息
                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                 DispatchQueue.main.async {
-                    Toast.show(message: "设备已被其他用户绑定")
+                    Toast.show(message: "设备已被其他用户绑定".localizable())
                 }
             default:
                 break
@@ -167,17 +167,17 @@ class DeviceViewController: UIViewController {
             
             // 更新设备标题
             if let deviceNo = device["deviceNo"] as? String {
-                deviceTitleButton.setTitle("设备" + deviceNo.suffix(5), for: .normal)
+                deviceTitleButton.setTitle("设备".localizable() + deviceNo.suffix(5), for: .normal)
                 deviceTitleButton.sizeToFit()
             }
             
             // 更新设备在线状态
             if let status = device["onStatus"] as? String {
                 if status == "00" {
-                    deviceStatusLabel.text = "在线"
+                    deviceStatusLabel.text = "在线".localizable()
                     topIconButton.setBackgroundImage(UIImage(named: "device_top_icon_online.png"), for: .normal)
                 } else {
-                    deviceStatusLabel.text = "离线"
+                    deviceStatusLabel.text = "离线".localizable()
                     topIconButton.setBackgroundImage(UIImage(named: "device_top_icon_offline.png"), for: .normal)
                 }
             }
@@ -196,14 +196,14 @@ class DeviceViewController: UIViewController {
                 }
             }
         } else {
-            deviceTitleButton.setTitle("无绑定设备", for: .normal)
+            deviceTitleButton.setTitle("无绑定设备".localizable(), for: .normal)
             deviceTitleButton.sizeToFit()
-            deviceStatusLabel.text = "离线"
+            deviceStatusLabel.text = "离线".localizable()
             topIconButton.setBackgroundImage(UIImage(named: "device_top_icon_offline.png"), for: .normal)
             deviceWifiImageView.image = UIImage(named: "deviceWifi1")
             devicePowerImageView.image = UIImage(named: "devicePower1")
-            deviceSourceButton.setTitle("中文", for: .normal)
-            deviceTargetButton.setTitle("英文", for: .normal)
+            deviceSourceButton.setTitle("中文".localizable(), for: .normal)
+            deviceTargetButton.setTitle("英文".localizable(), for: .normal)
         }
     }
     
@@ -212,10 +212,10 @@ class DeviceViewController: UIViewController {
             if device["onStatus"] as? String == "00" {
                 performSegue(withIdentifier: "showDeviceSettingVC", sender: nil)
             } else {
-                Toast.show(message: "设备离线")
+                Toast.show(message: "设备离线".localizable())
             }
         } else {
-            Toast.show(message: "无可用设备")
+            Toast.show(message: "无可用设备".localizable())
         }
     }
     
@@ -227,10 +227,10 @@ class DeviceViewController: UIViewController {
                 let navigationViewController = UINavigationController(rootViewController: viewController)
                 present(navigationViewController, animated: true, completion: nil)
             } else {
-                Toast.show(message: "设备离线")
+                Toast.show(message: "设备离线".localizable())
             }
         } else {
-            Toast.show(message: "无可用设备")
+            Toast.show(message: "无可用设备".localizable())
         }
     }
     
@@ -241,10 +241,10 @@ class DeviceViewController: UIViewController {
                 viewController.isDeviceSourceLanguage = false
                 present(UINavigationController(rootViewController: viewController), animated: true, completion: nil)
             } else {
-                Toast.show(message: "设备离线")
+                Toast.show(message: "设备离线".localizable())
             }
         } else {
-            Toast.show(message: "无可用设备")
+            Toast.show(message: "无可用设备".localizable())
         }
     }
     

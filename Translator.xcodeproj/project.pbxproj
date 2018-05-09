@@ -11,7 +11,6 @@
 		CC08C512206111660055F329 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C510206111660055F329 /* male.png */; };
 		CC08C513206111660055F329 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C511206111660055F329 /* female.png */; };
 		CC14D2DC209D576C005B37BA /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14D2DB209D576C005B37BA /* Localizable.swift */; };
-		CC1877D4204CDE1200495412 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1877D3204CDE1200495412 /* Device.storyboard */; };
 		CC1877D6204CDF2500495412 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */; };
 		CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1877D7204CE52400495412 /* add_device_top_bg.png */; };
 		CC205A351FDE1AAE00F04213 /* SpeechSourceToTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC205A341FDE1AAE00F04213 /* SpeechSourceToTarget.swift */; };
@@ -29,6 +28,9 @@
 		CC43DC26209C347700D46E25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC43DC28209C347700D46E25 /* Localizable.strings */; };
 		CC43DC30209C410000D46E25 /* UserSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC43DC32209C410000D46E25 /* UserSetting.storyboard */; };
 		CC43DC38209C54D900D46E25 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43DC37209C54D900D46E25 /* AppTabBarController.swift */; };
+		CC44AFE220A2C2FC00C49798 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC44AFE420A2C2FC00C49798 /* InfoPlist.strings */; };
+		CC44AFEC20A2C48200C49798 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44AFEB20A2C48200C49798 /* LaunchScreen.storyboard */; };
+		CC44AFF920A2D0C200C49798 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44AFFB20A2D0C200C49798 /* Device.storyboard */; };
 		CC4772B81F95B7350010DA18 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */; };
 		CC49BD01207AFE0A0056600C /* DeviceWifiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */; };
 		CC596B4E1FBAF26A00DDE288 /* ESP_NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B461FBAF26900DDE288 /* ESP_NetUtil.m */; };
@@ -72,7 +74,6 @@
 		CCC8A7FD1F7BAB7F001AD700 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A7DB1F7BAB7F001AD700 /* AppService.swift */; };
 		CCC8A7FE1F7BAB7F001AD700 /* AppUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A7DC1F7BAB7F001AD700 /* AppUtil.swift */; };
 		CCC8A7FF1F7BAB7F001AD700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC8A7DD1F7BAB7F001AD700 /* Assets.xcassets */; };
-		CCC8A8001F7BAB7F001AD700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC8A7DF1F7BAB7F001AD700 /* LaunchScreen.storyboard */; };
 		CCC8A8041F7BAB7F001AD700 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A7E61F7BAB7F001AD700 /* GCDAsyncSocket.m */; };
 		CCC8A8061F7BAB7F001AD700 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A7E81F7BAB7F001AD700 /* Language.swift */; };
 		CCC8A8081F7BAB7F001AD700 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8A7EA1F7BAB7F001AD700 /* LoginViewController.swift */; };
@@ -120,7 +121,6 @@
 		CC08C510206111660055F329 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 		CC08C511206111660055F329 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
 		CC14D2DB209D576C005B37BA /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		CC1877D3204CDE1200495412 /* Device.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Device.storyboard; sourceTree = "<group>"; };
 		CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		CC1877D7204CE52400495412 /* add_device_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_device_top_bg.png; sourceTree = "<group>"; };
 		CC205A341FDE1AAE00F04213 /* SpeechSourceToTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSourceToTarget.swift; sourceTree = "<group>"; };
@@ -136,15 +136,19 @@
 		CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView3Controller.swift; sourceTree = "<group>"; };
 		CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindPassword.storyboard; sourceTree = "<group>"; };
 		CC43DC27209C347700D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CC43DC29209C354B00D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "../zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		CC43DC2A209C354B00D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		CC43DC2B209C35BE00D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = ../en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC43DC2D209C38C400D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Main.strings; sourceTree = "<group>"; };
 		CC43DC2F209C38C600D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "../zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		CC43DC34209C410600D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UserSetting.strings; sourceTree = "<group>"; };
 		CC43DC35209C410C00D46E25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/UserSetting.storyboard; sourceTree = "<group>"; };
 		CC43DC36209C411300D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UserSetting.strings"; sourceTree = "<group>"; };
 		CC43DC37209C54D900D46E25 /* AppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		CC44AFE520A2C30400C49798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC44AFE620A2C32500C49798 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CC44AFEB20A2C48200C49798 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC44AFFA20A2D0C200C49798 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Device.storyboard; sourceTree = "<group>"; };
+		CC44AFFD20A2D0C700C49798 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Device.strings; sourceTree = "<group>"; };
+		CC44AFFF20A2D0CD00C49798 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Device.strings"; sourceTree = "<group>"; };
 		CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWifiListViewController.swift; sourceTree = "<group>"; };
 		CC596B451FBAF26900DDE288 /* ESP_WifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_WifiUtil.h; sourceTree = "<group>"; };
@@ -380,7 +384,7 @@
 		CCAAADA82003132A0029DFAA /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				CC1877D3204CDE1200495412 /* Device.storyboard */,
+				CC44AFFB20A2D0C200C49798 /* Device.storyboard */,
 				CCC3C873204F902B00BD670B /* DeviceViewController.swift */,
 				CCF67F5E206DD23D009CFB4C /* DeviceListViewController.swift */,
 				CC8D0A332060BB13009CBC87 /* DeviceSettingViewController.swift */,
@@ -417,12 +421,13 @@
 			children = (
 				CC2B86772021B9E900F816EE /* Translator.entitlements */,
 				CCC8A7E11F7BAB7F001AD700 /* Main.storyboard */,
-				CCC8A7DF1F7BAB7F001AD700 /* LaunchScreen.storyboard */,
+				CC44AFEB20A2C48200C49798 /* LaunchScreen.storyboard */,
 				CCC8A7DA1F7BAB7F001AD700 /* AppDelegate.swift */,
 				CCC8A7F01F7BAB7F001AD700 /* AppNavigationController.swift */,
 				CC43DC37209C54D900D46E25 /* AppTabBarController.swift */,
 				CCC8A7EF1F7BAB7F001AD700 /* Translator-Bridging-Header.h */,
 				CCC8A7E71F7BAB7F001AD700 /* Info.plist */,
+				CC44AFE420A2C2FC00C49798 /* InfoPlist.strings */,
 				CC43DC28209C347700D46E25 /* Localizable.strings */,
 				CCC8A7DD1F7BAB7F001AD700 /* Assets.xcassets */,
 				CC303BFB206B44BF008CADA4 /* Core */,
@@ -610,7 +615,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1877D4204CDE1200495412 /* Device.storyboard in Resources */,
+				CC44AFE220A2C2FC00C49798 /* InfoPlist.strings in Resources */,
 				CC3DD0D820732F9F00D03950 /* FindPassword.storyboard in Resources */,
 				CC08C512206111660055F329 /* male.png in Resources */,
 				CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */,
@@ -618,11 +623,11 @@
 				CC94F2F21F7DFA1600C70786 /* Main.storyboard in Resources */,
 				CC08C513206111660055F329 /* female.png in Resources */,
 				CC43DC30209C410000D46E25 /* UserSetting.storyboard in Resources */,
+				CC44AFEC20A2C48200C49798 /* LaunchScreen.storyboard in Resources */,
 				CCF21B9A207C9CE500F3CD36 /* device_top_icon_online.png in Resources */,
 				CCE9FF6520766C860061B186 /* Register.storyboard in Resources */,
 				CC43DC26209C347700D46E25 /* Localizable.strings in Resources */,
 				CC8AD34C20622D5F00459311 /* gender_selected.png in Resources */,
-				CCC8A8001F7BAB7F001AD700 /* LaunchScreen.storyboard in Resources */,
 				CC2A56F6205518B400875B4D /* device_wifi_clear.png in Resources */,
 				CCB54E321FAAB9E500CF1CA1 /* TranslateTableViewCell.xib in Resources */,
 				CCC3C878204F93D200BD670B /* device_top_bg.png in Resources */,
@@ -630,6 +635,7 @@
 				CCC8A7FF1F7BAB7F001AD700 /* Assets.xcassets in Resources */,
 				CCF21B9C207C9CFD00F3CD36 /* device_top_icon_offline.png in Resources */,
 				CC2E4D6C208304BB0047BDCC /* device_binding_top_bg.png in Resources */,
+				CC44AFF920A2D0C200C49798 /* Device.storyboard in Resources */,
 				CC8AD34B20622D5F00459311 /* gender_unselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -771,14 +777,24 @@
 			name = UserSetting.storyboard;
 			sourceTree = "<group>";
 		};
-		CCC8A7DF1F7BAB7F001AD700 /* LaunchScreen.storyboard */ = {
+		CC44AFE420A2C2FC00C49798 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC43DC29209C354B00D46E25 /* zh-Hans */,
-				CC43DC2B209C35BE00D46E25 /* en */,
+				CC44AFE520A2C30400C49798 /* en */,
+				CC44AFE620A2C32500C49798 /* zh-Hans */,
 			);
-			name = LaunchScreen.storyboard;
-			path = Base.lproj;
+			name = InfoPlist.strings;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		CC44AFFB20A2D0C200C49798 /* Device.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC44AFFA20A2D0C200C49798 /* Base */,
+				CC44AFFD20A2D0C700C49798 /* en */,
+				CC44AFFF20A2D0CD00C49798 /* zh-Hans */,
+			);
+			name = Device.storyboard;
 			sourceTree = "<group>";
 		};
 		CCC8A7E11F7BAB7F001AD700 /* Main.storyboard */ = {
@@ -915,6 +931,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;
@@ -947,6 +964,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Translator/Translator.entitlements;

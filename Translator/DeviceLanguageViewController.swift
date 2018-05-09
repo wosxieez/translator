@@ -22,8 +22,8 @@ class DeviceLanguageViewController: UITableViewController {
             }
         }
         
-        title = "选择语言"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(doBackAction))
+        title = "选择语言".localizable()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消".localizable(), style: .plain, target: self, action: #selector(doBackAction))
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

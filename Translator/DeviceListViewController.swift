@@ -16,8 +16,8 @@ class DeviceListViewController: UITableViewController {
         super.viewDidLoad()
         getBindingDeviceList()
         
-        navigationItem.title = "绑定的设备列表"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(cancelAction))
+        navigationItem.title = "设备列表".localizable()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消".localizable(), style: .plain, target: self, action: #selector(cancelAction))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,10 +42,10 @@ class DeviceListViewController: UITableViewController {
         }
         
         if let deviceNo = deviceList?[indexPath.row]["deviceNo"] as? String {
-            cell!.textLabel?.text = "设备" + deviceNo.suffix(5)
+            cell!.textLabel?.text = "设备".localizable() + deviceNo.suffix(5)
         }
         if let deviceStatus = deviceList?[indexPath.row]["onStatus"] as? String {
-            cell!.detailTextLabel?.text = deviceStatus == "00" ? "在线" : "离线"
+            cell!.detailTextLabel?.text = deviceStatus == "00" ? "在线".localizable() : "离线".localizable()
         }
         
         return cell!

@@ -20,7 +20,7 @@ class DeviceSettingViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "设备设置"
+        title = "设备设置".localizable()
         view.isUserInteractionEnabled = false
         NotificationCenter.default.addObserver(self, selector: #selector(didUpdateDeviceInfoAction), name: AppNotification.DidUpdateDeviceInfo, object: nil) // 监听当前设备发生变化通知
         updateView()
@@ -64,9 +64,9 @@ class DeviceSettingViewController: UITableViewController {
                 if let result = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
                     if result["resultCode"] as? String == "0" && result["isLast"] as? Int == 1 {
                         DispatchQueue.main.async {
-                            let alert = UIAlertController(title: "固件更新", message: "是否升级到最新版本: " + (result["version"] as! String), preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-                            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                            let alert = UIAlertController(title: "固件更新".localizable(), message: "是否升级到最新版本: ".localizable() + (result["version"] as! String), preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "取消".localizable().localizable(), style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "确定".localizable(), style: .default, handler: { (action) in
                                 // 通知设备更新到最新版本
                                 var deviceContent: [String: Any] = [:]
                                 deviceContent["version"] = result["version"] as? String
@@ -88,19 +88,19 @@ class DeviceSettingViewController: UITableViewController {
             break
         case 4:
             // 删除设备
-            let alertController = UIAlertController(title: "提示", message: "确定要删除当前设备吗？", preferredStyle: .actionSheet)
-            alertController.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-            alertController.addAction(UIAlertAction(title: "确定", style: .destructive, handler: { (action) in
+            let alertController = UIAlertController(title: "提示".localizable(), message: "确定要删除当前设备吗？".localizable(), preferredStyle: .actionSheet)
+            alertController.addAction(UIAlertAction(title: "取消".localizable(), style: .cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "确定".localizable(), style: .destructive, handler: { (action) in
                 AppService.getInstance().deleteDevice(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String, completionHandler: { (data, response, error) in
                     guard data != nil && error == nil else { return }
                     if let object = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
                         DispatchQueue.main.async {
                             if object["resultCode"] as? String == "00" {
-                                Toast.show(message: "设备删除成功")
+                                Toast.show(message: "设备删除成功".localizable())
                                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 self.navigationController?.popViewController(animated: true)
                             } else {
-                                Toast.show(message: "设备删除失败")
+                                Toast.show(message: "设备删除失败".localizable())
                             }
                         }
                     }
@@ -124,7 +124,7 @@ class DeviceSettingViewController: UITableViewController {
             // 如果当前设备为空，直接返回到设备界面
             if let device = AppUtil.currentDevice {
                 if device["onStatus"] as? String == "01" {
-                    Toast.show(message: "设备离线")
+                    Toast.show(message: "设备离线".localizable())
                     self.navigationController?.popViewController(animated: true)
                 } else {
                     self.updateView()
@@ -142,17 +142,17 @@ class DeviceSettingViewController: UITableViewController {
             refreshGenderView(isMale: true)
         }
         if let speakTime = AppUtil.currentDevice?["speakTime"] as? Int {
-            speakTimeCell.detailTextLabel?.text = String(speakTime) + "秒"
+            speakTimeCell.detailTextLabel?.text = String(speakTime) + "秒".localizable()
         } else {
             speakTimeCell.detailTextLabel?.text = ""
         }
         if let shutdownTime  = AppUtil.currentDevice?["shutdownTime"] as? Int {
-            shutdownTimeCell.detailTextLabel?.text = String(shutdownTime) + "分钟"
+            shutdownTimeCell.detailTextLabel?.text = String(shutdownTime) + "分钟".localizable()
         } else {
             shutdownTimeCell.detailTextLabel?.text = ""
         }
         if let standbyTime = AppUtil.currentDevice?["standbyTime"] as? Int {
-            standbyTimeCell.detailTextLabel?.text = String(standbyTime) + "分钟"
+            standbyTimeCell.detailTextLabel?.text = String(standbyTime) + "分钟".localizable()
         } else {
             standbyTimeCell.detailTextLabel?.text = ""
         }
