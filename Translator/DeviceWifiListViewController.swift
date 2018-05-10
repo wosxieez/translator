@@ -15,17 +15,17 @@ class DeviceWifiListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "选取网络"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .done, target: self, action: #selector(doCancelAction))
+        navigationItem.title = "选取网络".localizable()
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消".localizable(), style: .done, target: self, action: #selector(doCancelAction))
         
         // 历史网络
         if var wifiHistory = UserDefaults.standard.value(forKey: "wifiHistory2") as? [[String: String]] {
             wifiHistory.reverse()
-            wifiGroupData.append(WifiGroup(name: "历史网络", list: wifiHistory))
+            wifiGroupData.append(WifiGroup(name: "历史网络".localizable(), list: wifiHistory))
         }
         
         // 热点/连接的网络
-        var hotspotWifiGroup = WifiGroup(name: "选择网络", list: [])
+        var hotspotWifiGroup = WifiGroup(name: "选择网络".localizable(), list: [])
         if let ssid = AppUtil.getSSID() {
             hotspotWifiGroup.list.append(["ssid": ssid, "password": ""])
         }

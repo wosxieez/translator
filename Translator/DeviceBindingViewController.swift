@@ -74,7 +74,7 @@ class DeviceBindingViewController: UIViewController {
                             // 派发设备绑定发送变化通知并切换到设备界面
                             NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                             self.navigationController?.popToRootViewController(animated: true)
-                            Toast.show(message: "绑定成功")
+                            Toast.show(message: "绑定成功".localizable())
                         default:
                             Toast.show(message: dicData["resultMsg"] as? String)
                         }

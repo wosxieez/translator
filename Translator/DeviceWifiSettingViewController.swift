@@ -11,11 +11,12 @@ import NetworkExtension
 
 class DeviceWifiSettingViewController: UIViewController {
     
+    var toast: Toast?
     var eyeImageView: UIImageView!
     var isEyeOn: Bool = false
     var tbSocketSession: TBSocketSession?
-    var toast: Toast?
     var isConfigDeviceWifiSuccess: Bool = false
+    
     @IBOutlet weak var ssidTextFiled: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var commitButton: UIButton!
@@ -23,15 +24,16 @@ class DeviceWifiSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(wifiSelectedAction), name: Notification.Name("wifiSelected"), object: nil)
-        
         // ssid textField
         let wifiSelectImageView = UIImageView(image: UIImage(named: "deviceWifiSelectIcon"))
         wifiSelectImageView.center = CGPoint(x: 22, y: 22)
+        
         let ssidRightView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        let ssidRightViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(ssidRightViewTapAction))
+        let ssidRightViewTapGesture = UITapGestureRecognizer(target: self,
+                                                             action: #selector(ssidRightViewTapAction))
         ssidRightView.addGestureRecognizer(ssidRightViewTapGesture)
         ssidRightView.addSubview(wifiSelectImageView)
+        
         ssidTextFiled.borderStyle = .none
         ssidTextFiled.rightView = ssidRightView
         ssidTextFiled.rightViewMode = .always
@@ -40,11 +42,12 @@ class DeviceWifiSettingViewController: UIViewController {
         passwordTextField.borderStyle = .none
         passwordTextField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         passwordTextField.rightViewMode = .always
+        
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(changePasswordAction))
         eyeImageView = UIImageView(image: UIImage(named: "deviceWifiEyeOffIcon"))
         eyeImageView.frame.size.width = 19
         eyeImageView.frame.size.height = 13
         eyeImageView.center = passwordTextField.rightView!.center
-        let tapGes = UITapGestureRecognizer(target: self, action: #selector(changePasswordAction))
         eyeImageView.addGestureRecognizer(tapGes)
         eyeImageView.isUserInteractionEnabled = true
         passwordTextField.rightView!.addSubview(eyeImageView)
@@ -58,10 +61,13 @@ class DeviceWifiSettingViewController: UIViewController {
             ssidTextFiled.text = ssid
             passwordTextField.text = ""
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(wifiSelectedAction), name: Notification.Name("wifiSelected"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.navigationBar.tintColor = AppUtil.themeColor
         UIApplication.shared.statusBarStyle = .default
     }
@@ -71,32 +77,50 @@ class DeviceWifiSettingViewController: UIViewController {
     }
     
     @objc func wifiSelectedAction(notification: Notification) {
+        
         if let wifi = notification.object as? [String: String] {
+            
             ssidTextFiled.text = wifi["ssid"]
             passwordTextField.text = wifi["password"]
+            
         }
+        
     }
     
     @objc func changePasswordAction() {
+        
         isEyeOn = !isEyeOn
+        
         if isEyeOn {
+            
             eyeImageView.image = UIImage(named: "deviceWifiEyeOnIcon")
             passwordTextField.isSecureTextEntry = false
+            
         } else {
+            
             eyeImageView.image = UIImage(named: "deviceWifiEyeOffIcon")
             passwordTextField.isSecureTextEntry = true
+            
         }
+        
     }
     
     @IBAction func doConfigWifiAction() {
+        
         if AppUtil.getSSID() == "tangdi" {
+            
             beganConfigDeviceWifiTip() // 开始配网提示
             prepareConfigDeviceWifi()
+            
         } else {
-            #if !DEBUG // DEBUG环境不编译下面代码
+            // DEBUG环境不编译下面代码
+            #if !DEBUG
             if #available(iOS 11.0, *) {
-                beganConfigDeviceWifiTip() // 开始配网提示
+                // 开始配网提示
+                beganConfigDeviceWifiTip()
+                
                 let hotspotConfig = NEHotspotConfiguration(ssid: "tangdi", passphrase: "12345678", isWEP: false)
+                
                 NEHotspotConfigurationManager.shared.apply(hotspotConfig) { (error) in
                     if AppUtil.getSSID() == "tangdi" {
                         self.prepareConfigDeviceWifi()
@@ -104,12 +128,17 @@ class DeviceWifiSettingViewController: UIViewController {
                         self.endConfigDeviceWifiTip(result: false) // 结束配网提示
                     }
                 }
+                
             } else {
-                let ac = UIAlertController(title: "提示", message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678", preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "确定", style: .default, handler: nil))
+                
+                let ac = UIAlertController(title: "提示".localizable(),
+                                           message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678",
+                                           preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "确定".localizable(), style: .default, handler: nil))
                 present(ac, animated: true, completion: nil)
             }
             #endif
+            
         }
     }
     
@@ -118,7 +147,7 @@ class DeviceWifiSettingViewController: UIViewController {
             if self.toast == nil {
                 self.toast = Toast(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
             }
-            self.toast?.open(message: "正在配网...", delayCloseTime: 0)
+            self.toast?.open(message: "正在配网...".localizable(), delayCloseTime: 0)
             self.commitButton.isEnabled = false
             self.commitButton.alpha = 0.5
         }
@@ -127,10 +156,10 @@ class DeviceWifiSettingViewController: UIViewController {
     func endConfigDeviceWifiTip(result: Bool) {
         DispatchQueue.main.async {
             if result {
-                self.toast?.open(message: "配网成功", delayCloseTime: 3)
+                self.toast?.open(message: "配网成功".localizable(), delayCloseTime: 3)
                 self.saveWifiHistory()
             } else {
-                self.toast?.open(message: "配网失败", delayCloseTime: 3)
+                self.toast?.open(message: "配网失败".localizable(), delayCloseTime: 3)
             }
             self.commitButton.isEnabled = true
             self.commitButton.alpha = 1

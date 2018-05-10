@@ -26,6 +26,7 @@ class TranslateView2Controller: UIViewController {
     @IBOutlet weak var targetButton:UIButton!
     @IBOutlet weak var tableView:UITableView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,9 +41,12 @@ class TranslateView2Controller: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.register(nib2, forCellReuseIdentifier: "cell2")
         
-        NotificationCenter.default.addObserver(self, selector: #selector(startTranslate), name: Notification.Name("startTranslate"), object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(endTranslate), name: Notification.Name("endTranslate"), object: nil);
-        NotificationCenter.default.addObserver(self, selector: #selector(languageChanged), name: Notification.Name("languageChanged"), object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(startTranslate),
+                                               name: Notification.Name("startTranslate"), object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(endTranslate),
+                                               name: Notification.Name("endTranslate"), object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(languageChanged),
+                                               name: Notification.Name("languageChanged"), object: nil);
         
         startButton.layer.cornerRadius = 5
         startButton.setTitle(AppUtil.sourceLanguage.name, for: .normal)
@@ -52,6 +56,7 @@ class TranslateView2Controller: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         UIApplication.shared.statusBarStyle = .lightContent
         sourceButton.setTitle(AppUtil.sourceLanguage.name, for: .normal)
         targetButton.setTitle(AppUtil.targetLanguage.name, for: .normal)
@@ -68,7 +73,7 @@ class TranslateView2Controller: UIViewController {
             self.stopRecognition()
         }
     }
-    
+
     @objc func languageChanged() -> Void {
         startButton.setTitle(AppUtil.sourceLanguage.name, for: .normal)
         startButton2.setTitle(AppUtil.targetLanguage.name, for: .normal)
@@ -87,8 +92,12 @@ class TranslateView2Controller: UIViewController {
                     SpeechSourceToTarget.getInstance().start(callback: self.recognitionResult)
                 }
             } else {
-                let noPremissionAlert = UIAlertController(title: "无法识别", message: "请在iPhone的\"设置-隐私-麦克风\"选项中，允许百国译访问到您的麦克风", preferredStyle: UIAlertControllerStyle.alert)
-                noPremissionAlert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: nil))
+                let noPremissionAlert = UIAlertController(title: "无法识别",
+                                                          message: "请在iPhone的\"设置-隐私-麦克风\"选项中，允许百国译访问到您的麦克风",
+                                                          preferredStyle: UIAlertControllerStyle.alert)
+                noPremissionAlert.addAction(UIAlertAction(title: "确定",
+                                                          style: UIAlertActionStyle.default,
+                                                          handler: nil))
                 self.present(noPremissionAlert, animated: true, completion: nil)
             }
         }
