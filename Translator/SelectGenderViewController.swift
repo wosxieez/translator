@@ -54,7 +54,7 @@ class SelectGenderViewController: UIViewController {
                                                   mobile: AppUtil.uesrnameForRegister,
                                                   sex: isMale ? "M" : "F", completionHandler: completeHandler)
         } else {
-            Toast.show(message: "请选择性别")
+            Toast.show(message: "请选择性别".localizable())
         }
     }
     
@@ -65,7 +65,7 @@ class SelectGenderViewController: UIViewController {
             if jsonDic != nil {
                 if (jsonDic!["resultCode"] as? String) == "0" {
                     DispatchQueue.main.async {
-                        Toast.show(message: "注册成功")
+                        Toast.show(message: "注册成功".localizable())
                         NotificationCenter.default.post(name: Notification.Name("registerSuccess"), object: nil)
                         self.navigationController?.popToRootViewController(animated: true)
                     }

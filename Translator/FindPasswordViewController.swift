@@ -25,7 +25,7 @@ class FindPasswordViewController: UIViewController {
         // 给验证码输入框右边增加 发送验证码按钮
         sendMobileCodeButton = UIButton(type: .custom)
         sendMobileCodeButton.frame = CGRect(x: 0, y: 0, width: 80, height: 28)
-        sendMobileCodeButton.setTitle("获取验证码", for: .normal)
+        sendMobileCodeButton.setTitle("获取验证码".localizable(), for: .normal)
         sendMobileCodeButton.layer.cornerRadius = 5
         sendMobileCodeButton.layer.borderColor = AppUtil.themeColor.cgColor
         sendMobileCodeButton.layer.borderWidth = 1
@@ -63,14 +63,14 @@ class FindPasswordViewController: UIViewController {
             AppService.getInstance().pushMobileCode(tomobile: mobilePhoneInput.text,
                                                     completionHandler: sendMobileCodeHandler)
         } else {
-            Toast.show(message: "请输入有效的手机号码")
+            Toast.show(message: "请输入有效的手机号码".localizable())
         }
     }
     
     func sendMobileCodeHandler(data:Data?, response:URLResponse?, error:Error?) {
         if error != nil || data == nil {
             DispatchQueue.main.async {
-                Toast.show(message: "请求失败")
+                Toast.show(message: "请求失败".localizable())
             }
             return
         }
@@ -125,7 +125,7 @@ class FindPasswordViewController: UIViewController {
             
             // 到主队列去更新倒计时秒数
             DispatchQueue.main.async {
-                self.sendMobileCodeButton.setTitle("重新获取(" + String(self.resendCount) + ")", for: .normal)
+                self.sendMobileCodeButton.setTitle("重新获取".localizable() + "(" + String(self.resendCount) + ")", for: .normal)
             }
             
             if (self.resendCount <= 0)
@@ -136,7 +136,7 @@ class FindPasswordViewController: UIViewController {
                     self.sendMobileCodeButton.backgroundColor = UIColor.white
                     self.sendMobileCodeButton.setTitleColor(AppUtil.themeColor, for: .normal)
                     self.sendMobileCodeButton.isEnabled = true
-                    self.sendMobileCodeButton.setTitle("获取验证码", for: .normal)
+                    self.sendMobileCodeButton.setTitle("获取验证码".localizable(), for: .normal)
                 }
             }
         })
@@ -148,13 +148,13 @@ class FindPasswordViewController: UIViewController {
     {
         if (!AppUtil.isPhoneNumber(phoneNumber: mobilePhoneInput.text!))
         {
-            Toast.show(message: "请输入有效的手机号码")
+            Toast.show(message: "请输入有效的手机号码".localizable())
             return
         }
         
         if (mobileCodeInput.text == nil || mobileCodeInput.text == "")
         {
-            Toast.show(message: "请输入有效的验证码")
+            Toast.show(message: "请输入有效的验证码".localizable())
             return
         }
         

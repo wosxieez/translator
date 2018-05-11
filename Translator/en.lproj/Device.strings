@@ -1,21 +1,21 @@
 
 /* Class = "UILabel"; text = "删除设备"; ObjectID = "53J-3B-ykP"; */
-"53J-3B-ykP.text" = "Device Delete";
+"53J-3B-ykP.text" = "Device delete";
 
 /* Class = "UILabel"; text = "待机时长"; ObjectID = "6SI-k7-bl0"; */
-"6SI-k7-bl0.text" = "Standby Time";
+"6SI-k7-bl0.text" = "Standby time";
 
 /* Class = "UIButton"; normalTitle = "确定"; ObjectID = "6k0-6d-olZ"; */
 "6k0-6d-olZ.normalTitle" = "Ok";
 
 /* Class = "UIButton"; normalTitle = "设备绑定"; ObjectID = "7s5-1i-L7W"; */
-"7s5-1i-L7W.normalTitle" = "Device Binding";
+"7s5-1i-L7W.normalTitle" = "Device binding";
 
 /* Class = "UILabel"; text = "自动关机时间"; ObjectID = "8aQ-7m-Lmc"; */
-"8aQ-7m-Lmc.text" = "Shutdown Time";
+"8aQ-7m-Lmc.text" = "Shutdown time";
 
 /* Class = "UIButton"; normalTitle = "设备联网"; ObjectID = "BJT-Ya-0TW"; */
-"BJT-Ya-0TW.normalTitle" = "Device Networking";
+"BJT-Ya-0TW.normalTitle" = "Device networking";
 
 /* Class = "UILabel"; text = "开启您的百国通之旅"; ObjectID = "BR1-mH-STE"; */
 "BR1-mH-STE.text" = "Welcome";
@@ -24,10 +24,10 @@
 "HIa-F3-Qob.text" = "15min";
 
 /* Class = "UILabel"; text = "步骤1: 点击设备联网，帮助您的百国通连接网络"; ObjectID = "LTY-5s-0bB"; */
-"LTY-5s-0bB.text" = "步骤1: 点击设备联网，帮助您的百国通连接网络";
+"LTY-5s-0bB.text" = "";
 
 /* Class = "UITextView"; text = "如果选择的是手机热点，请在配网成功后打开手机热点"; ObjectID = "MMR-S5-4wg"; */
-"MMR-S5-4wg.text" = "如果选择的是手机热点，请在配网成功后打开手机热点";
+"MMR-S5-4wg.text" = "";
 
 /* Class = "UITabBarItem"; title = "设备"; ObjectID = "Occ-eU-0zh"; */
 "Occ-eU-0zh.title" = "Device";
@@ -39,28 +39,28 @@
 "RVP-Mz-hLp.text" = "30min";
 
 /* Class = "UILabel"; text = "步骤2: 点击设备绑定，将已联网的设备进行绑定"; ObjectID = "TZg-eZ-4sw"; */
-"TZg-eZ-4sw.text" = "步骤2: 点击设备绑定，将已联网的设备进行绑定";
+"TZg-eZ-4sw.text" = "";
 
 /* Class = "UILabel"; text = "设备联网"; ObjectID = "XWp-pY-dRm"; */
-"XWp-pY-dRm.text" = "Device Networking";
+"XWp-pY-dRm.text" = "Device networking";
 
 /* Class = "UILabel"; text = "版本信息"; ObjectID = "Zxj-SJ-6Gh"; */
 "Zxj-SJ-6Gh.text" = "Version";
 
 /* Class = "UITableViewSection"; headerTitle = "发音人"; ObjectID = "fiZ-Cn-rGG"; */
-"fiZ-Cn-rGG.headerTitle" = "发音人";
+"fiZ-Cn-rGG.headerTitle" = "Speaker";
 
 /* Class = "UIButton"; normalTitle = "英文"; ObjectID = "gkB-mM-aFW"; */
-"gkB-mM-aFW.normalTitle" = "英文";
+"gkB-mM-aFW.normalTitle" = "English";
 
 /* Class = "UILabel"; text = "离线"; ObjectID = "juE-Ef-OcA"; */
 "juE-Ef-OcA.text" = "Offline";
 
 /* Class = "UIButton"; normalTitle = "中文"; ObjectID = "qZu-L8-OAL"; */
-"qZu-L8-OAL.normalTitle" = "中文";
+"qZu-L8-OAL.normalTitle" = "Chinese";
 
 /* Class = "UILabel"; text = "请长按设备左侧键，听到提示后输入密码"; ObjectID = "r2M-w4-77Z"; */
-"r2M-w4-77Z.text" = "请长按设备左侧键，听到提示后输入密码";
+"r2M-w4-77Z.text" = "Please press the left key of the device and enter the password after hearing the prompts";
 
 /* Class = "UILabel"; text = "录音时长"; ObjectID = "sOk-CB-xa7"; */
 "sOk-CB-xa7.text" = "Recording Time";

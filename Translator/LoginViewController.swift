@@ -2,10 +2,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    var indicator:UIActivityIndicatorView!
     @IBOutlet weak var usernameDisplay: UITextField!
     @IBOutlet weak var passwordDisplay: UITextField!
     @IBOutlet weak var commitButton: UIButton!
-    var indicator:UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +95,7 @@ class LoginViewController: UIViewController {
                     Toast.show(message: dataObject["resultMsg"] as? String);
                 }
             } else {
-                Toast.show(message: "登录失败");
+                Toast.show(message: "登录失败".localizable());
             }
         }
     }

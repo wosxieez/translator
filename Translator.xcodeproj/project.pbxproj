@@ -24,7 +24,6 @@
 		CC303BFE206B66BA008CADA4 /* TBSocketSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC303BFD206B66BA008CADA4 /* TBSocketSession.swift */; };
 		CC36352D1FA80AB700B118D9 /* TranslateView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */; };
 		CC3635361FA8655F00B118D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8A81E1F7BAD52001AD700 /* AudioToolbox.framework */; };
-		CC3DD0D820732F9F00D03950 /* FindPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */; };
 		CC43DC26209C347700D46E25 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC43DC28209C347700D46E25 /* Localizable.strings */; };
 		CC43DC30209C410000D46E25 /* UserSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC43DC32209C410000D46E25 /* UserSetting.storyboard */; };
 		CC43DC38209C54D900D46E25 /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC43DC37209C54D900D46E25 /* AppTabBarController.swift */; };
@@ -33,6 +32,8 @@
 		CC44AFF920A2D0C200C49798 /* Device.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44AFFB20A2D0C200C49798 /* Device.storyboard */; };
 		CC4772B81F95B7350010DA18 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */; };
 		CC49BD01207AFE0A0056600C /* DeviceWifiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */; };
+		CC56890A20A5269600A3A861 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56890C20A5269600A3A861 /* Register.storyboard */; };
+		CC56891120A529EA00A3A861 /* FindPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56891320A529EA00A3A861 /* FindPassword.storyboard */; };
 		CC596B4E1FBAF26A00DDE288 /* ESP_NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B461FBAF26900DDE288 /* ESP_NetUtil.m */; };
 		CC596B4F1FBAF26A00DDE288 /* ESP_ByteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B481FBAF26A00DDE288 /* ESP_ByteUtil.m */; };
 		CC596B501FBAF26A00DDE288 /* ESP_CRC8.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B4C1FBAF26A00DDE288 /* ESP_CRC8.m */; };
@@ -90,7 +91,6 @@
 		CCE07BEE1FEBC02E00CB25F7 /* TranslateView4Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE07BEB1FEBC02D00CB25F7 /* TranslateView4Controller.swift */; };
 		CCE07BEF1FEBC02E00CB25F7 /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE07BEC1FEBC02E00CB25F7 /* SpeechRecognition.swift */; };
 		CCE07BF01FEBC02E00CB25F7 /* MicrosoftSpeechService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE07BED1FEBC02E00CB25F7 /* MicrosoftSpeechService.swift */; };
-		CCE9FF6520766C860061B186 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9FF6420766C860061B186 /* Register.storyboard */; };
 		CCEEFE532073D683005D5642 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEEFE522073D683005D5642 /* AboutMeViewController.swift */; };
 		CCF21B9A207C9CE500F3CD36 /* device_top_icon_online.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF21B99207C9CE500F3CD36 /* device_top_icon_online.png */; };
 		CCF21B9C207C9CFD00F3CD36 /* device_top_icon_offline.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF21B9B207C9CFD00F3CD36 /* device_top_icon_offline.png */; };
@@ -134,7 +134,6 @@
 		CC2E4D6B208304BB0047BDCC /* device_binding_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_binding_top_bg.png; sourceTree = "<group>"; };
 		CC303BFD206B66BA008CADA4 /* TBSocketSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSocketSession.swift; sourceTree = "<group>"; };
 		CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView3Controller.swift; sourceTree = "<group>"; };
-		CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindPassword.storyboard; sourceTree = "<group>"; };
 		CC43DC27209C347700D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CC43DC2A209C354B00D46E25 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		CC43DC2D209C38C400D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = ../en.lproj/Main.strings; sourceTree = "<group>"; };
@@ -151,6 +150,12 @@
 		CC44AFFF20A2D0CD00C49798 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Device.strings"; sourceTree = "<group>"; };
 		CC4772B71F95B7350010DA18 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceWifiListViewController.swift; sourceTree = "<group>"; };
+		CC56890D20A5269D00A3A861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
+		CC56890F20A526A000A3A861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Register.strings; sourceTree = "<group>"; };
+		CC56891020A526A800A3A861 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Register.strings"; sourceTree = "<group>"; };
+		CC56891420A529F400A3A861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindPassword.storyboard; sourceTree = "<group>"; };
+		CC56891620A529F600A3A861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FindPassword.strings; sourceTree = "<group>"; };
+		CC56891720A529FB00A3A861 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FindPassword.strings"; sourceTree = "<group>"; };
 		CC596B451FBAF26900DDE288 /* ESP_WifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_WifiUtil.h; sourceTree = "<group>"; };
 		CC596B461FBAF26900DDE288 /* ESP_NetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_NetUtil.m; sourceTree = "<group>"; };
 		CC596B471FBAF26900DDE288 /* ESPVersionMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPVersionMacro.h; sourceTree = "<group>"; };
@@ -228,7 +233,6 @@
 		CCE07BEB1FEBC02D00CB25F7 /* TranslateView4Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslateView4Controller.swift; sourceTree = "<group>"; };
 		CCE07BEC1FEBC02E00CB25F7 /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 		CCE07BED1FEBC02E00CB25F7 /* MicrosoftSpeechService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrosoftSpeechService.swift; sourceTree = "<group>"; };
-		CCE9FF6420766C860061B186 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		CCEEFE522073D683005D5642 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		CCF21B99207C9CE500F3CD36 /* device_top_icon_online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_top_icon_online.png; sourceTree = "<group>"; };
 		CCF21B9B207C9CFD00F3CD36 /* device_top_icon_offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_top_icon_offline.png; sourceTree = "<group>"; };
@@ -524,8 +528,8 @@
 		CCF3AD4A1FB3006300C9EBCA /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CCE9FF6420766C860061B186 /* Register.storyboard */,
-				CC3DD0D720732F9F00D03950 /* FindPassword.storyboard */,
+				CC56890C20A5269600A3A861 /* Register.storyboard */,
+				CC56891320A529EA00A3A861 /* FindPassword.storyboard */,
 				CCC8A7EA1F7BAB7F001AD700 /* LoginViewController.swift */,
 				CCC8A7F21F7BAB7F001AD700 /* RegisterViewController.swift */,
 				CC5EB6E62077BBD900426E9F /* SetPasswordViewController.swift */,
@@ -616,7 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC44AFE220A2C2FC00C49798 /* InfoPlist.strings in Resources */,
-				CC3DD0D820732F9F00D03950 /* FindPassword.storyboard in Resources */,
+				CC56891120A529EA00A3A861 /* FindPassword.storyboard in Resources */,
 				CC08C512206111660055F329 /* male.png in Resources */,
 				CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */,
 				CC2A56EE2054FD3300875B4D /* device_wifi_top_icon.png in Resources */,
@@ -625,7 +629,7 @@
 				CC43DC30209C410000D46E25 /* UserSetting.storyboard in Resources */,
 				CC44AFEC20A2C48200C49798 /* LaunchScreen.storyboard in Resources */,
 				CCF21B9A207C9CE500F3CD36 /* device_top_icon_online.png in Resources */,
-				CCE9FF6520766C860061B186 /* Register.storyboard in Resources */,
+				CC56890A20A5269600A3A861 /* Register.storyboard in Resources */,
 				CC43DC26209C347700D46E25 /* Localizable.strings in Resources */,
 				CC8AD34C20622D5F00459311 /* gender_selected.png in Resources */,
 				CC2A56F6205518B400875B4D /* device_wifi_clear.png in Resources */,
@@ -795,6 +799,26 @@
 				CC44AFFF20A2D0CD00C49798 /* zh-Hans */,
 			);
 			name = Device.storyboard;
+			sourceTree = "<group>";
+		};
+		CC56890C20A5269600A3A861 /* Register.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC56890D20A5269D00A3A861 /* Base */,
+				CC56890F20A526A000A3A861 /* en */,
+				CC56891020A526A800A3A861 /* zh-Hans */,
+			);
+			name = Register.storyboard;
+			sourceTree = "<group>";
+		};
+		CC56891320A529EA00A3A861 /* FindPassword.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC56891420A529F400A3A861 /* Base */,
+				CC56891620A529F600A3A861 /* en */,
+				CC56891720A529FB00A3A861 /* zh-Hans */,
+			);
+			name = FindPassword.storyboard;
 			sourceTree = "<group>";
 		};
 		CCC8A7E11F7BAB7F001AD700 /* Main.storyboard */ = {

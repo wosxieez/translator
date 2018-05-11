@@ -47,17 +47,19 @@ class DeviceSettingViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         guard indexPath.section == 1 else { return }
         
         switch indexPath.row {
-        case 0: // 自动关机时间
+        case 0:
+            // 自动关机时间
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 0)
             show(deviceSettingTableViewController, sender: nil)
-        case 1: // 待机时长
+        case 1:
+            // 待机时长
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 1)
             show(deviceSettingTableViewController, sender: nil)
-        case 2: // 录音时长
+        case 2:
+            // 录音时长
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 2)
             show(deviceSettingTableViewController, sender: nil)
         case 3:
@@ -211,20 +213,15 @@ class DeviceSettingViewController: UITableViewController {
     /// 检查设备的版本信息
     ///
     func checkDeviceVersion() {
-        
         AppService.getInstance().queryDeviceLatestVersion(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String) { (data, response, error) in
-            
             guard data != nil && error == nil else { return }
-            
+           
             if let result = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
-                
                 if result["resultCode"] as? String == "0" && result["isLast"] as? Int == 1 {
-                    
                     DispatchQueue.main.async {
                         let alert = UIAlertController(title: "固件更新".localizable(), message: "是否升级到最新版本: ".localizable() + (result["version"] as! String), preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "取消".localizable().localizable(), style: .cancel, handler: nil))
                         alert.addAction(UIAlertAction(title: "确定".localizable(), style: .default, handler: { (action) in
-                            
                             // 通知设备更新到最新版本
                             var deviceContent: [String: Any] = [:]
                             deviceContent["version"] = result["version"] as? String

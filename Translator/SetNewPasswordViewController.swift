@@ -30,26 +30,26 @@ class SetNewPasswordViewController: UIViewController {
     
     @IBAction func commitAction(_ sender: Any) {
         if !AppUtil.isPassword(value: newPasswordInput1.text) {
-            Toast.show(message: "请输入6-18位字符密码")
+            Toast.show(message: "请输入6-18位字符密码".localizable())
             return
         }
         
         if newPasswordInput1.text != newPasswordInput2.text {
-            Toast.show(message: "两次输入的密码不一致")
+            Toast.show(message: "两次输入的密码不一致".localizable())
             return
         }
         
         AppService.getInstance().resetPassword(username: AppUtil.username, password: newPasswordInput2.text) { (data, response, error) in
             guard error == nil && data != nil else {
                 DispatchQueue.main.async {
-                    Toast.show(message: "密码重置失败")
+                    Toast.show(message: "密码重置失败".localizable())
                 }
                 return
             }
             
             if let object = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
                 DispatchQueue.main.async {
-                    Toast.show(message: object["resultMsg"] as? String)
+                    Toast.show(message: (object["resultMsg"] as? String)?.localizable())
                     if object["resultMsg"] as? String == "重置成功" {
                         self.navigationController?.popToRootViewController(animated: true)
                     }

@@ -12,7 +12,7 @@
 "7Qg-N5-ykN.text" = "密码修改";
 
 /* Class = "UITextField"; placeholder = "输入6-16位字符"; ObjectID = "7lF-iO-PZO"; */
-"7lF-iO-PZO.placeholder" = "输入6-16位字符";
+"7lF-iO-PZO.placeholder" = "输入6-18位字符";
 
 /* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "8Ss-qN-k95"; */
 "8Ss-qN-k95.placeholder" = "请输入旧密码";

@@ -35,12 +35,12 @@ class SetPasswordViewController: UIViewController {
     
     @IBAction func commitAction(_ sender: Any) {
         if !AppUtil.isPassword(value: newPasswordInput1.text) {
-            Toast.show(message: "请输入6-18位字符密码")
+            Toast.show(message: "请输入6-18位字符密码".localizable())
             return
         }
         
         if newPasswordInput1.text != newPasswordInput2.text {
-            Toast.show(message: "两次输入的密码不一致")
+            Toast.show(message: "两次输入的密码不一致".localizable())
             return
         }
         

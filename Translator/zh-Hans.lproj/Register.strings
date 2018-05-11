@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "女"; ObjectID = "2QO-wx-ehX"; */
+"2QO-wx-ehX.text" = "女";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "9MM-Xe-quE"; */
+"9MM-Xe-quE.normalTitle" = "确定";
+
+/* Class = "UILabel"; text = "验证码"; ObjectID = "Elw-zI-xVS"; */
+"Elw-zI-xVS.text" = "验证码";
+
+/* Class = "UILabel"; text = "让百国通更懂你"; ObjectID = "FnP-Od-5KL"; */
+"FnP-Od-5KL.text" = "让百国通更懂你";
+
+/* Class = "UITextField"; placeholder = "6位数字验证码"; ObjectID = "IR8-Xb-LoK"; */
+"IR8-Xb-LoK.placeholder" = "6位数字验证码";
+
+/* Class = "UITextField"; placeholder = "输入6-18位字符密码"; ObjectID = "Idy-R9-75j"; */
+"Idy-R9-75j.placeholder" = "输入6-18位字符密码";
+
+/* Class = "UILabel"; text = "输入密码"; ObjectID = "KBc-UP-2Pm"; */
+"KBc-UP-2Pm.text" = "输入密码";
+
+/* Class = "UITextField"; placeholder = "输入手机号码"; ObjectID = "MH6-pJ-N6r"; */
+"MH6-pJ-N6r.placeholder" = "输入手机号码";
+
+/* Class = "UILabel"; text = "男"; ObjectID = "Sxa-g2-Rr6"; */
+"Sxa-g2-Rr6.text" = "男";
+
+/* Class = "UILabel"; text = "确认密码"; ObjectID = "a2o-6S-ZBU"; */
+"a2o-6S-ZBU.text" = "确认密码";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "aGq-IO-kGs"; */
+"aGq-IO-kGs.normalTitle" = "确定";
+
+/* Class = "UIButton"; normalTitle = "确定"; ObjectID = "biV-VO-Bz0"; */
+"biV-VO-Bz0.normalTitle" = "确定";
+
+/* Class = "UITextField"; placeholder = "将密码再输入一次"; ObjectID = "cIx-W2-w63"; */
+"cIx-W2-w63.placeholder" = "将密码再输入一次";
+
+/* Class = "UILabel"; text = "注册用户"; ObjectID = "plJ-4G-G2S"; */
+"plJ-4G-G2S.text" = "注册用户";
+
+/* Class = "UILabel"; text = "密码"; ObjectID = "sHI-du-Om7"; */
+"sHI-du-Om7.text" = "密码";
+
+/* Class = "UILabel"; text = "手机号码"; ObjectID = "wSo-32-xEN"; */
+"wSo-32-xEN.text" = "手机号码";
