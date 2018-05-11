@@ -258,6 +258,7 @@ class DeviceViewController: UIViewController {
     func getBindingDeviceDetail() {
         AppService.getInstance().queryDeviceList { (data, response, error) in
             guard data != nil && error == nil else { return }
+            
             if let jsonObject = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) {
                 if let object = jsonObject as? [String: Any] {
                     if object["resultCode"] as? String == "00" {
@@ -266,6 +267,7 @@ class DeviceViewController: UIViewController {
                                 if let device = devList.first {
                                     AppService.getInstance().queryDeviceDetail(deviceNo: device["deviceNo"] as! String) { (data, response, error) in
                                         guard data != nil && error == nil else { return }
+                                        
                                         if let jsonObject = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) {
                                             if let object = jsonObject as? [String: Any] {
                                                 if object["resultCode"] as? String == "0" {

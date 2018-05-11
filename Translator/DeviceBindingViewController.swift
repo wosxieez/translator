@@ -22,7 +22,6 @@ class DeviceBindingViewController: UIViewController {
         textField1.delegate = self
         textField1.tintColor = UIColor.white
         textField1.backgroundColor = UIColor.clear
-        textField1.becomeFirstResponder()
         textField1.layer.borderColor = UIColor.white.cgColor
         textField1.layer.cornerRadius = 5
         textField1.layer.borderWidth = 0.5
@@ -54,8 +53,15 @@ class DeviceBindingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.navigationBar.tintColor = AppUtil.themeColor
         UIApplication.shared.statusBarStyle = .default
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        textField1.becomeFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

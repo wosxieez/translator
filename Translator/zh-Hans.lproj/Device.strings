@@ -26,8 +26,7 @@
 /* Class = "UILabel"; text = "步骤1: 点击设备联网，帮助您的百国通连接网络"; ObjectID = "LTY-5s-0bB"; */
 "LTY-5s-0bB.text" = "步骤1: 点击设备联网，帮助您的百国通连接网络";
 
-/* Class = "UITextView"; text = "如果选择的是手机热点，请在配网成功后打开手机热点"; ObjectID = "MMR-S5-4wg"; */
-"MMR-S5-4wg.text" = "如果选择的是手机热点，请在配网成功后打开手机热点";
+"JjK-Rb-SRE.text" = "如果选择的是手机热点，请在配网成功后打开手机热点";
 
 /* Class = "UITabBarItem"; title = "设备"; ObjectID = "Occ-eU-0zh"; */
 "Occ-eU-0zh.title" = "设备";
