@@ -65,6 +65,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>UseDebugServer</key>
-	<false/>
+	<true/>
 </dict>
 </plist>

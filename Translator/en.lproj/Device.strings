@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "删除设备"; ObjectID = "53J-3B-ykP"; */
-"53J-3B-ykP.text" = "Device delete";
+"53J-3B-ykP.text" = "Delete";
 
 /* Class = "UILabel"; text = "待机时长"; ObjectID = "6SI-k7-bl0"; */
 "6SI-k7-bl0.text" = "Standby time";

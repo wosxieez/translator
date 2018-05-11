@@ -13,17 +13,22 @@ import SystemConfiguration.CaptiveNetwork
 class AppUtil {
     
     static var currentDevice: [String: Any]? {
+        
         didSet {
+            
             NotificationCenter.default.post(name: AppNotification.DidUpdateDeviceInfo, object: nil)
         }
     }
     
     /// http服务地址
     static var httpServerURL: String {
+        
         get {
+            
             if Bundle.main.infoDictionary?["UseDebugServer"] as? Int == 1 {
-                return "http://192.168.0.173:8080/"
+                return "http://testbgt.tombot.com.cn:3989/"
             } else {
+                
                 return "http://42.159.245.82:8181/"
             }
         }
@@ -33,7 +38,7 @@ class AppUtil {
     static var socketServerHost: String {
         get {
             if Bundle.main.infoDictionary?["UseDebugServer"] as? Int == 1 {
-                return "192.168.0.173"
+                return "testbgt.tombot.com.cn"
             } else {
                 return "42.159.245.82"
             }
@@ -42,7 +47,13 @@ class AppUtil {
     
     /// Socket服务端口
     static var socketServerPort: Int {
-        return 11880
+        get {
+            if Bundle.main.infoDictionary?["UseDebugServer"] as? Int == 1 {
+                return 3992
+            } else {
+                return 11880
+            }
+        }
     }
     
     /// 当前登录的用户信息用户名&密码&性别

@@ -17,10 +17,16 @@ class DeviceSettingViewController: UITableViewController {
     @IBOutlet weak var standbyTimeCell: UITableViewCell!
     @IBOutlet weak var deviceVersionCell: UITableViewCell!
     
+    let imageView = UIImageView(image: UIImage(named: "deviceUpdateAvailable"))
+    
+    // 设备最新版本号
+    var deviceLatestVersion: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateView()
+        checkDeviceVersion()
         title = "设备设置".localizable()
         view.isUserInteractionEnabled = false
         
@@ -51,40 +57,43 @@ class DeviceSettingViewController: UITableViewController {
         
         switch indexPath.row {
         case 0:
-            // 自动关机时间
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 0)
             show(deviceSettingTableViewController, sender: nil)
         case 1:
-            // 待机时长
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 1)
             show(deviceSettingTableViewController, sender: nil)
         case 2:
-            // 录音时长
             let deviceSettingTableViewController = DeviceSettingTableViewController(flat: 2)
             show(deviceSettingTableViewController, sender: nil)
         case 3:
-            // 版本信息
-            break
+            noticeDeviceUpdate()
         case 4:
-            // 删除设备
             let alertController = UIAlertController(title: "提示".localizable(), message: "确定要删除当前设备吗？".localizable(), preferredStyle: .actionSheet)
             alertController.addAction(UIAlertAction(title: "取消".localizable(), style: .cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "确定".localizable(), style: .destructive, handler: { (action) in
+                
                 AppService.getInstance().deleteDevice(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String, completionHandler: { (data, response, error) in
+                    
                     guard data != nil && error == nil else { return }
+                    
                     if let object = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
+                        
                         DispatchQueue.main.async {
+                            
                             if object["resultCode"] as? String == "00" {
+                                
                                 Toast.show(message: "设备删除成功".localizable())
                                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 self.navigationController?.popViewController(animated: true)
                             } else {
+                                
                                 Toast.show(message: "设备删除失败".localizable())
                             }
                         }
                     }
                 })
             }))
+            
             present(alertController, animated: true, completion: nil)
         default:
             break
@@ -100,10 +109,10 @@ class DeviceSettingViewController: UITableViewController {
     
     @objc func didUpdateDeviceInfoAction() {
         DispatchQueue.main.async {
-            // 如果当前设备为空，直接返回到设备界面
             if let device = AppUtil.currentDevice {
                 if device["onStatus"] as? String == "01" {
                     Toast.show(message: "设备离线".localizable())
+                    
                     self.navigationController?.popViewController(animated: true)
                 } else {
                     self.updateView()
@@ -215,34 +224,51 @@ class DeviceSettingViewController: UITableViewController {
     func checkDeviceVersion() {
         AppService.getInstance().queryDeviceLatestVersion(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String) { (data, response, error) in
             guard data != nil && error == nil else { return }
-           
+            
             if let result = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
-                if result["resultCode"] as? String == "0" && result["isLast"] as? Int == 1 {
+                if result["resultCode"] as? String == "0", result["isLast"] as? Int == 1 {
+                    self.deviceLatestVersion = result["version"] as? String
+                    
                     DispatchQueue.main.async {
-                        let alert = UIAlertController(title: "固件更新".localizable(), message: "是否升级到最新版本: ".localizable() + (result["version"] as! String), preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "取消".localizable().localizable(), style: .cancel, handler: nil))
-                        alert.addAction(UIAlertAction(title: "确定".localizable(), style: .default, handler: { (action) in
-                            // 通知设备更新到最新版本
-                            var deviceContent: [String: Any] = [:]
-                            deviceContent["version"] = result["version"] as? String
-                            
-                            var deviceMessage: [String: Any] = [:]
-                            deviceMessage["source"] = AppUtil.username
-                            deviceMessage["target"] = AppUtil.currentDevice?["deviceNo"]
-                            deviceMessage["type"] = "noticeDeviceUpdate"
-                            deviceMessage["content"] = deviceContent
-                            
-                            let message = Message()
-                            message.type = "appTransmit"
-                            message.content = deviceMessage
-                            
-                            NotificationCenter.default.post(name: AppNotification.SendMessage, object: message)
-                        }))
-                        
-                        self.present(alert, animated: true, completion: nil)
+                        if let textLabel = self.deviceVersionCell.textLabel {
+                            self.imageView.frame.origin.x = textLabel.frame.origin.x + textLabel.frame.size.width + 5
+                            self.imageView.center.y = textLabel.center.y
+                            self.deviceVersionCell.addSubview(self.imageView)
+                        }
                     }
+                } else {
+                    self.deviceLatestVersion = nil
                 }
             }
+        }
+    }
+    
+    ///
+    /// 提示设备更新
+    ///
+    func noticeDeviceUpdate() {
+        if let deviceLatestVersion = deviceLatestVersion {
+            let alert = UIAlertController(title: "固件更新".localizable(), message: "是否升级到最新版本: ".localizable() + deviceLatestVersion, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "取消".localizable().localizable(), style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "确定".localizable(), style: .default, handler: { (action) in
+                // 通知设备更新到最新版本
+                var deviceContent: [String: Any] = [:]
+                deviceContent["version"] = deviceLatestVersion
+                
+                var deviceMessage: [String: Any] = [:]
+                deviceMessage["source"] = AppUtil.username
+                deviceMessage["target"] = AppUtil.currentDevice?["deviceNo"]
+                deviceMessage["type"] = "noticeDeviceUpdate"
+                deviceMessage["content"] = deviceContent
+                
+                let message = Message()
+                message.type = "appTransmit"
+                message.content = deviceMessage
+                
+                NotificationCenter.default.post(name: AppNotification.SendMessage, object: message)
+            }))
+            
+            present(alert, animated: true, completion: nil)
         }
     }
     
