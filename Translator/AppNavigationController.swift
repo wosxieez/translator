@@ -39,6 +39,13 @@ class AppNavigationController: UINavigationController {
             }
             
             AppService.getInstance().updateAppSetting(username: AppUtil.username, appLanguage: language)
+            AppService.getInstance().getLanguageList(appLanguage: language) { (data, response, error) in
+                guard data != nil, error == nil else { return }
+                
+                if let result = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
+                    print(result)
+                }
+            }
         }
     }
     
@@ -46,6 +53,7 @@ class AppNavigationController: UINavigationController {
         // 用户注销 断开socket服务器 界面返回到登录界面
         tbSocketSession.disconnect()
         heartTimer?.invalidate()
+        
         DispatchQueue.main.async {
             self.popViewController(animated: true)
         }

@@ -365,6 +365,19 @@ class AppService
         }
     }
     
+    ///
+    /// 获取支持的语言列表
+    /// - Parameters:
+    ///   - appLanguage: app语言
+    ///
+    func getLanguageList(appLanguage: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        if let url = URL(string: AppUtil.httpServerURL + "tdTranslator/appUser/getLanList.do?lan=" + appLanguage) {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "GET"
+            URLSession.shared.dataTask(with: urlRequest, completionHandler: completionHandler).resume()
+        }
+    }
+    
 }
 
 /// String的md5扩展方法
