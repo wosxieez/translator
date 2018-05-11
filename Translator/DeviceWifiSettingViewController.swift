@@ -77,38 +77,26 @@ class DeviceWifiSettingViewController: UIViewController {
     }
     
     @objc func wifiSelectedAction(notification: Notification) {
-        
         if let wifi = notification.object as? [String: String] {
-            
             ssidTextFiled.text = wifi["ssid"]
             passwordTextField.text = wifi["password"]
-            
         }
-        
     }
     
     @objc func changePasswordAction() {
-        
         isEyeOn = !isEyeOn
         
         if isEyeOn {
-            
             eyeImageView.image = UIImage(named: "deviceWifiEyeOnIcon")
             passwordTextField.isSecureTextEntry = false
-            
         } else {
-            
             eyeImageView.image = UIImage(named: "deviceWifiEyeOffIcon")
             passwordTextField.isSecureTextEntry = true
-            
         }
-        
     }
     
     @IBAction func doConfigWifiAction() {
-        
         if AppUtil.getSSID() == "tangdi" {
-            
             beganConfigDeviceWifiTip() // 开始配网提示
             prepareConfigDeviceWifi()
             
@@ -130,7 +118,6 @@ class DeviceWifiSettingViewController: UIViewController {
                 }
                 
             } else {
-                
                 let ac = UIAlertController(title: "提示".localizable(),
                                            message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678",
                                            preferredStyle: .alert)
@@ -138,7 +125,6 @@ class DeviceWifiSettingViewController: UIViewController {
                 present(ac, animated: true, completion: nil)
             }
             #endif
-            
         }
     }
     
@@ -236,6 +222,7 @@ extension DeviceWifiSettingViewController: TBSocketSessionDelegate {
                 if content["resultCode"] as? String == "0" {
                     isConfigDeviceWifiSuccess = true
                     endConfigDeviceWifiTip(result: true)
+                    
                     DispatchQueue.main.async {
                         self.perform(#selector(self.doBackToRootAction), with: nil, afterDelay: 1)
                     }

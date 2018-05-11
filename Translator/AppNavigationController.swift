@@ -17,22 +17,29 @@ class AppNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 禁用手势滑动
+        tbSocketSession = TBSocketSession()
+        tbSocketSession.delegate = self
+        
         interactivePopGestureRecognizer?.isEnabled = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(appLoginAction), name:AppNotification.AppLogin, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appLogoutAction), name: AppNotification.AppLoout, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(sendMessageAction), name: AppNotification.SendMessage, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(checkSocketStatusAction), name: AppNotification.CheckSocketStatus, object: nil)
-        
-        tbSocketSession = TBSocketSession()
-        tbSocketSession.delegate = self
     }
     
     @objc func appLoginAction(notification: Notification) {
-        // 登录成功 开始获取文本翻译Key 识别Key OCR Key. 连接socket服务器
         AppUtil.getAppKey()
         tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
+        
+        if let appLanguage = (UserDefaults.standard.value(forKey: "AppleLanguages") as? [String])?.first {
+            var language = "en-US"
+            if appLanguage.contains("zh-Hans") {
+                language = "zh-CN"
+            }
+            
+            AppService.getInstance().updateAppSetting(username: AppUtil.username, appLanguage: language)
+        }
     }
     
     @objc func appLogoutAction(notification: Notification) {

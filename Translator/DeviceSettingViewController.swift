@@ -71,22 +71,17 @@ class DeviceSettingViewController: UITableViewController {
             let alertController = UIAlertController(title: "提示".localizable(), message: "确定要删除当前设备吗？".localizable(), preferredStyle: .actionSheet)
             alertController.addAction(UIAlertAction(title: "取消".localizable(), style: .cancel, handler: nil))
             alertController.addAction(UIAlertAction(title: "确定".localizable(), style: .destructive, handler: { (action) in
-                
                 AppService.getInstance().deleteDevice(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String, completionHandler: { (data, response, error) in
-                    
                     guard data != nil && error == nil else { return }
                     
                     if let object = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
-                        
                         DispatchQueue.main.async {
-                            
                             if object["resultCode"] as? String == "00" {
-                                
                                 Toast.show(message: "设备删除成功".localizable())
+                                
                                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 self.navigationController?.popViewController(animated: true)
                             } else {
-                                
                                 Toast.show(message: "设备删除失败".localizable())
                             }
                         }

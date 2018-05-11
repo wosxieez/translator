@@ -20,7 +20,6 @@
 		CC2A56EE2054FD3300875B4D /* device_wifi_top_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2A56ED2054FD3300875B4D /* device_wifi_top_icon.png */; };
 		CC2A56F6205518B400875B4D /* device_wifi_clear.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2A56F5205518B300875B4D /* device_wifi_clear.png */; };
 		CC2B86762021B9E900F816EE /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2B86752021B9E900F816EE /* NetworkExtension.framework */; };
-		CC2E4D6C208304BB0047BDCC /* device_binding_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC2E4D6B208304BB0047BDCC /* device_binding_top_bg.png */; };
 		CC303BFE206B66BA008CADA4 /* TBSocketSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC303BFD206B66BA008CADA4 /* TBSocketSession.swift */; };
 		CC36352D1FA80AB700B118D9 /* TranslateView3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */; };
 		CC3635361FA8655F00B118D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8A81E1F7BAD52001AD700 /* AudioToolbox.framework */; };
@@ -34,6 +33,7 @@
 		CC49BD01207AFE0A0056600C /* DeviceWifiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC49BD00207AFE0A0056600C /* DeviceWifiListViewController.swift */; };
 		CC56890A20A5269600A3A861 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56890C20A5269600A3A861 /* Register.storyboard */; };
 		CC56891120A529EA00A3A861 /* FindPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56891320A529EA00A3A861 /* FindPassword.storyboard */; };
+		CC56891820A568D700A3A861 /* device_binding_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC56891A20A568D700A3A861 /* device_binding_top_bg.png */; };
 		CC596B4E1FBAF26A00DDE288 /* ESP_NetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B461FBAF26900DDE288 /* ESP_NetUtil.m */; };
 		CC596B4F1FBAF26A00DDE288 /* ESP_ByteUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B481FBAF26A00DDE288 /* ESP_ByteUtil.m */; };
 		CC596B501FBAF26A00DDE288 /* ESP_CRC8.m in Sources */ = {isa = PBXBuildFile; fileRef = CC596B4C1FBAF26A00DDE288 /* ESP_CRC8.m */; };
@@ -131,7 +131,6 @@
 		CC2A56F5205518B300875B4D /* device_wifi_clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_wifi_clear.png; sourceTree = "<group>"; };
 		CC2B86752021B9E900F816EE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		CC2B86772021B9E900F816EE /* Translator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Translator.entitlements; sourceTree = "<group>"; };
-		CC2E4D6B208304BB0047BDCC /* device_binding_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device_binding_top_bg.png; sourceTree = "<group>"; };
 		CC303BFD206B66BA008CADA4 /* TBSocketSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSocketSession.swift; sourceTree = "<group>"; };
 		CC36352C1FA80AB700B118D9 /* TranslateView3Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateView3Controller.swift; sourceTree = "<group>"; };
 		CC43DC27209C347700D46E25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -156,6 +155,8 @@
 		CC56891420A529F400A3A861 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindPassword.storyboard; sourceTree = "<group>"; };
 		CC56891620A529F600A3A861 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FindPassword.strings; sourceTree = "<group>"; };
 		CC56891720A529FB00A3A861 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FindPassword.strings"; sourceTree = "<group>"; };
+		CC56891920A568D700A3A861 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/device_binding_top_bg.png; sourceTree = "<group>"; };
+		CC56891B20A568DA00A3A861 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/device_binding_top_bg.png"; sourceTree = "<group>"; };
 		CC596B451FBAF26900DDE288 /* ESP_WifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESP_WifiUtil.h; sourceTree = "<group>"; };
 		CC596B461FBAF26900DDE288 /* ESP_NetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESP_NetUtil.m; sourceTree = "<group>"; };
 		CC596B471FBAF26900DDE288 /* ESPVersionMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPVersionMacro.h; sourceTree = "<group>"; };
@@ -371,7 +372,7 @@
 				CC1877D7204CE52400495412 /* add_device_top_bg.png */,
 				CC2A56ED2054FD3300875B4D /* device_wifi_top_icon.png */,
 				CC2A56F5205518B300875B4D /* device_wifi_clear.png */,
-				CC2E4D6B208304BB0047BDCC /* device_binding_top_bg.png */,
+				CC56891A20A568D700A3A861 /* device_binding_top_bg.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -638,7 +639,7 @@
 				CC76CDEF1FCD6B3E00A58A18 /* TranslteTableViewCell2.xib in Resources */,
 				CCC8A7FF1F7BAB7F001AD700 /* Assets.xcassets in Resources */,
 				CCF21B9C207C9CFD00F3CD36 /* device_top_icon_offline.png in Resources */,
-				CC2E4D6C208304BB0047BDCC /* device_binding_top_bg.png in Resources */,
+				CC56891820A568D700A3A861 /* device_binding_top_bg.png in Resources */,
 				CC44AFF920A2D0C200C49798 /* Device.storyboard in Resources */,
 				CC8AD34B20622D5F00459311 /* gender_unselected.png in Resources */,
 			);
@@ -819,6 +820,15 @@
 				CC56891720A529FB00A3A861 /* zh-Hans */,
 			);
 			name = FindPassword.storyboard;
+			sourceTree = "<group>";
+		};
+		CC56891A20A568D700A3A861 /* device_binding_top_bg.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC56891920A568D700A3A861 /* en */,
+				CC56891B20A568DA00A3A861 /* zh-Hans */,
+			);
+			name = device_binding_top_bg.png;
 			sourceTree = "<group>";
 		};
 		CCC8A7E11F7BAB7F001AD700 /* Main.storyboard */ = {

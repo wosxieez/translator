@@ -315,7 +315,7 @@ class AppService
         }
     }
     
-    /// 更新设置设置
+    /// 更新设备设置
     ///
     /// - Parameters:
     ///   - devNo: 设备号
@@ -323,7 +323,6 @@ class AppService
     ///   - lanTo: 目标语言
     ///   - completionHandler: 回调函数
     func updateDeviceSetting(devNo: String, lanFrom: String?, lanTo: String?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        // 请求参数
         var httpBody = ["devNo": devNo]
         if let lanFrom = lanFrom { httpBody["lanFrom"] = lanFrom }
         if let lanTo = lanTo { httpBody["lanTo"] = lanTo }
@@ -335,6 +334,33 @@ class AppService
                 urlRequest.httpBody = httpData
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 URLSession.shared.dataTask(with: urlRequest, completionHandler: completionHandler).resume()
+            }
+        }
+    }
+    
+    ///
+    /// 更新App设置
+    ///
+    /// - Parameters:
+    ///     - username: app用户名
+    ///     - appLanguage app语言
+    ///
+    func updateAppSetting(username: String?, appLanguage: String, completionHandler: ((Data?, URLResponse?, Error?) -> Void)? = nil) {
+        guard username != nil else { return }
+        
+        let httpBody = ["username": username, "systemLan": appLanguage]
+        if let httpData = try? JSONSerialization.data(withJSONObject: httpBody, options: .prettyPrinted) {
+            if let url = URL(string: AppUtil.httpServerURL + "tdTranslator/appUser/updateSetting.do") {
+                var urlRequest = URLRequest(url: url)
+                urlRequest.httpMethod = "POST"
+                urlRequest.httpBody = httpData
+                urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                
+                if completionHandler != nil {
+                    URLSession.shared.dataTask(with: urlRequest, completionHandler: completionHandler!).resume()
+                } else {
+                    URLSession.shared.dataTask(with: urlRequest).resume()
+                }
             }
         }
     }
