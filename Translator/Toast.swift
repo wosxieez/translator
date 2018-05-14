@@ -44,7 +44,7 @@ class Toast: UIView {
     /// 打开显示
     func open(message:String?, delayCloseTime:TimeInterval) -> Void {
         // auto resize labeldisplay
-        labelDisplay.text = message
+        labelDisplay.text = message?.localizable()
         labelDisplay.sizeToFit()
         
         // resize owner

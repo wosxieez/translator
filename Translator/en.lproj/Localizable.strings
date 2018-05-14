@@ -54,3 +54,124 @@
 "请选择性别" = "Please select gender";
 "注册成功" = "Sign up success";
 "密码重置失败" = "Reset password failure";
+
+"该账号已经注册" = "This account is registed";
+"注册成功" = "regist successfully";
+
+"字段:[username]不能为空" = "[username] cannot be null";
+"字段:[password]不能为空" = "[username|password|phone No.|sex] cannot be null";
+"字段:[mobile]不能为空" = "[phone No.] cannot be null";
+"字段:[sex]不能为空" = "[sex] cannot be null";
+
+"手机号已经注册" = "This phone No. exists";
+"未知异常" = "unknown exception";
+"更新用户密码成功" = "update password successfully";
+
+"字段:[username]不能为空" = "[username] cannot be null";
+"字段:[oldPassword]不能为空" = "[old password] cannot be null";
+"字段:[newPassword]不能为空" = "[new password] cannot be null";
+
+"新密码不能和原密码相同" = "new password cannot be the same as the old one";
+"原密码错误" = "the old password is wrong";
+"用户绑定设备成功" = "bind device successfully";
+
+"用户绑定设备失败" = "bind unsuccessfully";
+"字段:[username]不能为空" = "[username] cannot be null";
+"字段:[verifyCodes]不能为空" = "[verifyCodes] cannot be null";
+
+"验证失败" = "verify unsuccessfully ";
+"设备已经被其它账号绑定" = " this device has been binded by other account";
+"未知异常" = "unknown exception";
+"设备不在线" = " the device is offline";
+"查询绑定设备成功" = "get binded devices successfully";
+"字段:[username]不能为空" = "[username] cannot be null";
+"获取短信验证码成功" = "get verify code successfully";
+"获取短信验证码失败" = "get verify code unsuccessfully";
+"字段:[mobile]不能为空" = "[mobile] cannot be null";
+"申请第三方短消息验证码失败" = "apply 3rd SMS verify code unsuccessfully ";
+"数据库操作异常" = "DB exception";
+"验证成功" = "verify successfully";
+"账户不存在" = "the account doesn't exsit ";
+"验证码错误" = " verify unsuccessfully";
+
+"字段:[mobile]不能为空" = "[account] cannot be null";
+"字段:[verifyCode]不能为空" = "[verifyCode] cannot be null";
+
+"获取常用设置信息成功" = "get normal setting successfully";
+"获取常用设置信息失败" = "get normal setting unsuccessfully";
+"重置成功" = "reset successfully";
+"重置失败" = "reset unsuccessfully";
+
+"账户不存在" = "the account doesn't exsit ";
+"字段:[mobile]不能为空" = "[account] cannot be null";
+
+"修改用户信息成功" = "update user information successfully";
+"查询播报声音名称成功" = "get tts voice name successfully";
+"获取支持的翻译的语言成功" = "get supported translation languages successfully";
+"用户解除绑定设备成功" = "unbind device successfully";
+
+"用户解除绑定设备失败" = "unbind device unsuccessfully";
+"字段:[username]不能为空" = "[username]cannot be null";
+"字段:[deviceId]不能为空" = "[deviceId]cannot be null";
+
+"获取版本信息成功" = "get version information successfully";
+"获取版本信息失败" = "get version information unsuccessfully";
+"设备号不能为空" = "the device No. cannot be null";
+"获取版本信息失败" = "get version information unsuccessfully";
+"查询密钥信息成功" = "get secret key successfully";
+"密钥信息为空" = "the secret key is null ";
+"查询密钥信息失败" = " get secret key unsuccessfully";
+"更新APP用户配置信息成功" = "update App user information successfully";
+"更新APP用户配置信息失败" = "update App user information successfully";
+"获取用户配置信息成功" = "get user setting successfully";
+"系统语言不能为空" = "The system language cannot be null";
+"文本翻译成功" = "text translation is successful";
+"翻译语种不支持" = "this translation languages are not supported";
+"账号信息不能为空" = "the account ";
+"源语言不能为空" = " source language";
+"目标语言不能为空" = "destination language";
+"翻译文本不能为空" = "text content cannot be null";
+"语音合成成功" = "tts successfully";
+"语音合成失败" = "tts unsuccessfully";
+"账号信息不能为空" = "the account ";
+"目标语言不能为空" = " destination language";
+"翻译文本不能为空" = "text content cannot be null";
+"ocr成功" = "OCR successfully";
+"ocr失败" = "OCR unsuccessfully";
+"连接服务地址成功" = "connect server successfully";
+"连接服务地址失败" = "connect server unsuccessfully";
+"登录成功" = "login successfully";
+"用户名或密码错误" = "account or password error ";
+"未知错误" = " unknown error";
+"注销成功" = "logout suncessfully";
+"APP通知设备成功" = "APP notifies device successfully";
+
+"设备离线" = "device is offline";
+"字段:[target]不能为空" = "[target] cannot be null";
+
+"设备已经绑定到其他APP用户" = "The device has been binded to other account";
+"激活成功" = "active device successfully";
+"设备号解密失败" = "decode the device No.unsuccessfully ";
+"设备激活失败" = " active device unsuccessfully";
+"设备登录成功!" = " login successfully";
+"设备编号或密码错误" = "device No. or password is wrong ";
+"未知错误" = "null";
+"设备通知APP成功" = "device notified App successfully";
+"APP用户离线+username" = "App user is offline";
+"生成验证码成功" = "generate verify code successfully";
+"生成验证码失败" = "generate verify code unsuccessfully";
+"设备查询密钥成功" = "get secret key successfully";
+"密钥信息为空" = "the secret key is null ";
+"设备查询密钥失败" = "get secret key unsuccessfully";
+"无法识别" = "cannot recogonize";
+"翻译超时" = "translate timeout";
+"更新设备配置信息成功" = "update device setting successfully";
+"更新设备配置信息失败" = "update device setting unsuccessfully";
+"设备号不能空" = "device No. cannot be null";
+"获取设备配置信息成功" = "get device setting successfully";
+"设备信息不能空" = "device No. cannot be null ";
+"不存在该设备的配置信息" = " no such device information";
+"客户端身份识别成功" = "authenticate successfully";
+"用户不存在" = "the account doesn't exist ";
+"密码错误" = "password is wrong ";
+"设备不存在" = " the devide doesn't exist";
