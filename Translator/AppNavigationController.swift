@@ -43,7 +43,20 @@ class AppNavigationController: UINavigationController {
                 guard data != nil, error == nil else { return }
                 
                 if let result = (try? JSONSerialization.jsonObject(with: data!, options: .mutableLeaves)) as? [String: Any] {
-                    print(result)
+                    if result["resultCode"] as? String == "0" {
+                        if let languages = result["data"] as? [[String: Any]] {
+                            AppUtil.deviceLanguages = []
+                            
+                            for language in languages {
+                                AppUtil.deviceLanguages.append(DeviceLanguage(id: language["id"] as! Int,
+                                                                              code: language["code"] as! String,
+                                                                              name: language["name"] as! String,
+                                                                              isORCEnabled: language["ocr"] as! Bool,
+                                                                              isASREnabled: language["asr"] as! Bool,
+                                                                              isTTSEnabled: language["tts"] as! Bool))
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -71,7 +84,6 @@ class AppNavigationController: UINavigationController {
             }
         }
     }
-    
     
     /// 检查Socket连接状态
     @objc func checkSocketStatusAction(notification: Notification) {

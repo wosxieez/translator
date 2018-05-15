@@ -97,8 +97,8 @@ class AppUtil {
     
     private static var _sourceLanguage = Language(name: "中文", streamCode: "zh-CN", recognitionCode: "zh-CN", translateCode: "zh-Hans", ttsCode: "zh-CN", ocrCode: "zh-Hans")
     private static var _targetLanguage = Language(name: "英语", streamCode: "en-US", recognitionCode: "en-US", translateCode: "en", ttsCode: "en-US", ocrCode: "en")
-    
-    static let player: AVSpeechSynthesizer! = AVSpeechSynthesizer()
+    static let player = AVSpeechSynthesizer()
+    static var deviceLanguages: [DeviceLanguage] = []
     
     public static var targetLanguage:Language {
         get {
@@ -126,6 +126,15 @@ class AppUtil {
                 return language
             }
         }
+        
+        return nil
+    }
+    
+    static func getDeviceLanguage(by code: String?) -> DeviceLanguage? {
+        for language in deviceLanguages {
+            if language.code == code { return language }
+        }
+        
         return nil
     }
     
@@ -228,4 +237,14 @@ class AppUtil {
         }
     }
     
+}
+
+///{"id":133,"code":"1837","name":"Sichuan dialect","lan":"en-US","ocr":false,"asr":true,"tts":true}
+struct DeviceLanguage {
+    let id: Int
+    let code: String
+    let name: String
+    let isORCEnabled: Bool
+    let isASREnabled: Bool
+    let isTTSEnabled: Bool
 }

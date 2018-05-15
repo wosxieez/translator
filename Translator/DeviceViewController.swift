@@ -184,14 +184,14 @@ class DeviceViewController: UIViewController {
             
             // 更新源语言
             if let sourceRecognitionCode = device["languageFrom"] as? String {
-                if let sourceLanguage = AppUtil.getLanguage(by: sourceRecognitionCode) {
+                if let sourceLanguage = AppUtil.getDeviceLanguage(by: sourceRecognitionCode) {
                     deviceSourceButton.setTitle(sourceLanguage.name, for: .normal)
                 }
             }
             
             // 更新目标语言
             if let targetRecognitionCode = device["languageTo"] as? String {
-                if let targetLanguage = AppUtil.getLanguage(by: targetRecognitionCode) {
+                if let targetLanguage = AppUtil.getDeviceLanguage(by: targetRecognitionCode) {
                     deviceTargetButton.setTitle(targetLanguage.name, for: .normal)
                 }
             }
@@ -221,7 +221,7 @@ class DeviceViewController: UIViewController {
     
     @IBAction func setDeviceSourceLanguageAction(_ sender: Any) {
         if let device = AppUtil.currentDevice {
-            if device["onStatus"] as? String == "00" {
+            if device["onStatus"] as? String != "00" {
                 let viewController = DeviceLanguageViewController()
                 viewController.isDeviceSourceLanguage = true
                 let navigationViewController = UINavigationController(rootViewController: viewController)

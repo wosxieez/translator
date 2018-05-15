@@ -4,19 +4,19 @@ class DeviceLanguageViewController: UITableViewController {
     
     var indexPathForSelectedRow: IndexPath?
     var isDeviceSourceLanguage = true // 默认是设置设备的源语言
-    var deviceSourceLanguage: Language?
-    var deviceTargetLanguage: Language?
+    var deviceSourceLanguage: DeviceLanguage?
+    var deviceTargetLanguage: DeviceLanguage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        deviceSourceLanguage = AppUtil.getLanguage(by: AppUtil.currentDevice?["languageFrom"] as? String)
-        deviceTargetLanguage = AppUtil.getLanguage(by: AppUtil.currentDevice?["languageTo"] as? String)
+        deviceSourceLanguage = AppUtil.getDeviceLanguage(by: AppUtil.currentDevice?["languageFrom"] as? String)
+        deviceTargetLanguage = AppUtil.getDeviceLanguage(by: AppUtil.currentDevice?["languageTo"] as? String)
         
         // 设置默认选中的语言索引路径
-        for i in 0..<AppUtil.supportLanguages.count {
-            let selectedLanguage = isDeviceSourceLanguage ? deviceSourceLanguage : deviceTargetLanguage
-            if AppUtil.supportLanguages[i].name == selectedLanguage?.name {
+        let selectedLanguage = isDeviceSourceLanguage ? deviceSourceLanguage : deviceTargetLanguage
+        for i in 0..<AppUtil.deviceLanguages.count {
+            if AppUtil.deviceLanguages[i].name == selectedLanguage?.name {
                 indexPathForSelectedRow = IndexPath(row: i, section: 0)
                 break
             }
@@ -31,7 +31,7 @@ class DeviceLanguageViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppUtil.supportLanguages.count
+        return AppUtil.deviceLanguages.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,20 +52,21 @@ class DeviceLanguageViewController: UITableViewController {
         }
         
         cell?.selectionStyle = .none
-        cell?.textLabel?.text = AppUtil.supportLanguages[indexPath.row].name
+        cell?.textLabel?.text = AppUtil.deviceLanguages[indexPath.row].name
         return cell!
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isDeviceSourceLanguage {
-            deviceSourceLanguage = AppUtil.supportLanguages[indexPath.row]
+            deviceSourceLanguage = AppUtil.deviceLanguages[indexPath.row]
         } else {
-            deviceTargetLanguage = AppUtil.supportLanguages[indexPath.row]
+            deviceTargetLanguage = AppUtil.deviceLanguages[indexPath.row]
         }
         
         if let devNo = AppUtil.currentDevice?["deviceNo"] as? String {
-            AppService.getInstance().updateDeviceSetting(devNo: devNo, lanFrom: deviceSourceLanguage?.recognitionCode, lanTo: deviceTargetLanguage?.recognitionCode) { (data, response, error) in
+            AppService.getInstance().updateDeviceSetting(devNo: devNo, lanFrom: deviceSourceLanguage?.code, lanTo: deviceTargetLanguage?.code) { (data, response, error) in
                 guard data != nil && error == nil else { return }
+                
                 if let result = (try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves)) as? [String: Any] {
                     if result["resultCode"] as? String == "0" {
                         NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
