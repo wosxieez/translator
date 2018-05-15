@@ -26,6 +26,12 @@ class DeviceLanguageViewController: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消".localizable(), style: .plain, target: self, action: #selector(doBackAction))
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

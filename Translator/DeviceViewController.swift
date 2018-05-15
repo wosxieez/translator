@@ -221,7 +221,7 @@ class DeviceViewController: UIViewController {
     
     @IBAction func setDeviceSourceLanguageAction(_ sender: Any) {
         if let device = AppUtil.currentDevice {
-            if device["onStatus"] as? String != "00" {
+            if device["onStatus"] as? String == "00" {
                 let viewController = DeviceLanguageViewController()
                 viewController.isDeviceSourceLanguage = true
                 let navigationViewController = UINavigationController(rootViewController: viewController)
