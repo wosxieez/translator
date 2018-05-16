@@ -96,6 +96,11 @@ class DeviceWifiSettingViewController: UIViewController {
     }
     
     @IBAction func doConfigWifiAction() {
+        guard !AppUtil.isNetworkConfigRunning else {
+            Toast.show(message: "网络配置中...请稍后再试".localizable())
+            return
+        }
+        
         if AppUtil.getSSID() == "tangdi" {
             beganConfigDeviceWifiTip() // 开始配网提示
             prepareConfigDeviceWifi()
@@ -142,7 +147,8 @@ class DeviceWifiSettingViewController: UIViewController {
     func endConfigDeviceWifiTip(result: Bool) {
         DispatchQueue.main.async {
             if result {
-                self.toast?.open(message: "配网成功".localizable(), delayCloseTime: 3)
+                //self.toast?.open(message: "配网成功".localizable(), delayCloseTime: 3)
+                NotificationCenter.default.post(name: AppNotification.NetworkConfigBegan, object: nil)
                 self.saveWifiHistory()
             } else {
                 self.toast?.open(message: "配网失败".localizable(), delayCloseTime: 3)

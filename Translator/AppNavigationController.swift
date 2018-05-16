@@ -7,28 +7,62 @@
 //
 
 import UIKit
+import Reachability
 
 class AppNavigationController: UINavigationController {
     
-    var heartTimer:Timer?   // 心跳计时器
+    /// 心跳计时器
+    var heartTimer:Timer?
+    
+    /// 是否是已登录状态
+    var isLoggedIn = false
+    
+    /// 服务监控计时器
+    var monitorTimer: Timer?
+    
+    /// 配网网络计时器
+    var networkConfigTimer: Timer?
+    
     var tbSocketSession: TBSocketSession!
     var cachedMessage: Message?
+    var reachability: Reachability!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tbSocketSession = TBSocketSession()
         tbSocketSession.delegate = self
-        
         interactivePopGestureRecognizer?.isEnabled = false
+        
+        monitorTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(onMonitorTimerAction), userInfo: nil, repeats: true)
         
         NotificationCenter.default.addObserver(self, selector: #selector(appLoginAction), name:AppNotification.AppLogin, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(appLogoutAction), name: AppNotification.AppLoout, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(sendMessageAction), name: AppNotification.SendMessage, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(checkSocketStatusAction), name: AppNotification.CheckSocketStatus, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(networkConfigBeganAction), name: AppNotification.NetworkConfigBegan, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(networkConfigSuccessAction), name: AppNotification.NetworkConfigSuccess, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(networkConfigFailAction), name: AppNotification.NetworkConfigFail, object: nil)
+        
+        reachability = Reachability()
+        reachability.whenReachable = { (reachability) in
+            // 网络恢复连接 检查服务连接情况
+            print("网络恢复连接")
+            if self.isLoggedIn, !self.tbSocketSession.isConnected {
+                self.tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
+            }
+        }
+        reachability.whenUnreachable = { (reachability) in
+            print("发现网络断开")
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+        }
     }
     
     @objc func appLoginAction(notification: Notification) {
+        isLoggedIn = true
         AppUtil.getAppKey()
         tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
         
@@ -63,6 +97,8 @@ class AppNavigationController: UINavigationController {
     }
     
     @objc func appLogoutAction(notification: Notification) {
+        isLoggedIn = false
+        
         // 用户注销 断开socket服务器 界面返回到登录界面
         tbSocketSession.disconnect()
         heartTimer?.invalidate()
@@ -87,8 +123,55 @@ class AppNavigationController: UINavigationController {
     
     /// 检查Socket连接状态
     @objc func checkSocketStatusAction(notification: Notification) {
-        if !tbSocketSession.isConnected {
+        if isLoggedIn, !tbSocketSession.isConnected {
             tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
+        }
+    }
+    
+    @objc func onMonitorTimerAction() {
+        print("网络监控时间到")
+        if isLoggedIn, !tbSocketSession.isConnected {
+            tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
+        }
+    }
+    
+    @objc func networkConfigBeganAction() {
+        if !AppUtil.isNetworkConfigRunning {
+            DispatchQueue.main.async {
+                 self.networkConfigTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.networkConfigTimerAction), userInfo: nil, repeats: false)
+            }
+        }
+    }
+    
+    @objc func networkConfigTimerAction() {
+        if AppUtil.isNetworkConfigRunning {
+            AppUtil.isNetworkConfigRunning = false
+            
+            DispatchQueue.main.async {
+                Toast.show(message: "配网失败".localizable())
+            }
+        }
+    }
+    
+    @objc func networkConfigSuccessAction() {
+        if AppUtil.isNetworkConfigRunning {
+            AppUtil.isNetworkConfigRunning = false
+            networkConfigTimer?.invalidate()
+            
+            DispatchQueue.main.async {
+                Toast.show(message: "配网成功".localizable())
+            }
+        }
+    }
+    
+    @objc func networkConfigFailAction() {
+        if AppUtil.isNetworkConfigRunning {
+            AppUtil.isNetworkConfigRunning = false
+            networkConfigTimer?.invalidate()
+            
+            DispatchQueue.main.async {
+                Toast.show(message: "配网失败".localizable())
+            }
         }
     }
     
@@ -139,6 +222,14 @@ extension AppNavigationController: TBSocketSessionDelegate {
             }
         case "S005":
             tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
+        case "wificonfig":
+            if (message.content as? [String: Any])?["state"] as? String == "true" {
+                print("配网成功")
+                NotificationCenter.default.post(name: AppNotification.NetworkConfigSuccess, object: nil)
+            } else {
+                print("配网失败")
+                NotificationCenter.default.post(name: AppNotification.NetworkConfigFail, object: nil)
+            }
         default:
             NotificationCenter.default.post(name: AppNotification.ReceiveMessage, object: message)
             break

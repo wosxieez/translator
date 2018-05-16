@@ -65,6 +65,9 @@ class AppUtil {
     static var uesrnameForRegister: String?
     static var passwordForRegister: String?
     
+    /// 是否正在进行设备网络配置
+    static var isNetworkConfigRunning = false
+    
     static var themeColor = UIColor(red: 78/255, green: 149/255, blue: 231/255, alpha: 1)
     static let supportLanguages = [Language(name: "中文", streamCode: "zh-CN", recognitionCode: "zh-CN", translateCode: "zh-Hans", ttsCode: "zh-CN", ocrCode: "zh-Hans"),
                                    Language(name: "阿拉伯语",  streamCode: "ar-EG", recognitionCode: "ar-EG", translateCode: "ar", ttsCode: "ar-EG", ocrCode: "ar"),

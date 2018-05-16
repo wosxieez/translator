@@ -5,5 +5,6 @@ use_frameworks!
 target 'Translator' do
 pod 'Starscream'
 pod 'IQKeyboardManagerSwift'
+pod 'ReachabilitySwift'
 end
 
