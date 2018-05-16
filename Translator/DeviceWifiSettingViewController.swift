@@ -148,6 +148,7 @@ class DeviceWifiSettingViewController: UIViewController {
         DispatchQueue.main.async {
             if result {
                 //self.toast?.open(message: "配网成功".localizable(), delayCloseTime: 3)
+                self.toast?.close()
                 NotificationCenter.default.post(name: AppNotification.NetworkConfigBegan, object: nil)
                 self.saveWifiHistory()
             } else {

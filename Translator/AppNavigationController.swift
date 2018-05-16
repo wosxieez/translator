@@ -137,9 +137,13 @@ class AppNavigationController: UINavigationController {
     
     @objc func networkConfigBeganAction() {
         if !AppUtil.isNetworkConfigRunning {
+            AppUtil.isNetworkConfigRunning = true
+            
             DispatchQueue.main.async {
-                 self.networkConfigTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.networkConfigTimerAction), userInfo: nil, repeats: false)
+                self.networkConfigTimer = Timer.scheduledTimer(timeInterval: 30, target: self, selector: #selector(self.networkConfigTimerAction), userInfo: nil, repeats: false)
             }
+            
+            print("网络配置开始...定时器开启")
         }
     }
     
@@ -150,6 +154,8 @@ class AppNavigationController: UINavigationController {
             DispatchQueue.main.async {
                 Toast.show(message: "配网失败".localizable())
             }
+            
+            print("网络配置结束...定时器关闭")
         }
     }
     
@@ -161,6 +167,8 @@ class AppNavigationController: UINavigationController {
             DispatchQueue.main.async {
                 Toast.show(message: "配网成功".localizable())
             }
+            
+            print("网络配置结束...定时器关闭")
         }
     }
     
@@ -172,6 +180,8 @@ class AppNavigationController: UINavigationController {
             DispatchQueue.main.async {
                 Toast.show(message: "配网失败".localizable())
             }
+            
+            print("网络配置结束...定时器关闭")
         }
     }
     
@@ -224,10 +234,8 @@ extension AppNavigationController: TBSocketSessionDelegate {
             tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
         case "wificonfig":
             if (message.content as? [String: Any])?["state"] as? String == "true" {
-                print("配网成功")
                 NotificationCenter.default.post(name: AppNotification.NetworkConfigSuccess, object: nil)
             } else {
-                print("配网失败")
                 NotificationCenter.default.post(name: AppNotification.NetworkConfigFail, object: nil)
             }
         default:

@@ -32,6 +32,7 @@ class DeviceViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(receiveMessageAction), name: AppNotification.ReceiveMessage, object: nil) // 监听收到消息通知
         NotificationCenter.default.addObserver(self, selector: #selector(needUpdateDeviceInfoAction), name: AppNotification.NeedUpdateDeviceInfo, object: nil) // 监听当前设备发生变化通知
         NotificationCenter.default.addObserver(self, selector: #selector(didUpdateDeviceInfoAction), name: AppNotification.DidUpdateDeviceInfo, object: nil) // 监听设备发生变化通知
+        NotificationCenter.default.addObserver(self, selector: #selector(networkConfigSuccessAction), name: AppNotification.NetworkConfigSuccess, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -131,6 +132,12 @@ class DeviceViewController: UIViewController {
     @objc func didUpdateDeviceInfoAction() {
         DispatchQueue.main.async {
             self.updateDeviceView()
+        }
+    }
+    
+    @objc func networkConfigSuccessAction() {
+        DispatchQueue.main.async {
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

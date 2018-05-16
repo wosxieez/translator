@@ -14,6 +14,7 @@ class AppTabBarController: UITabBarController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showTranslateViewController), name: Notification.Name("showTranslateViewController"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(networkConfigSuccessAction), name: AppNotification.NetworkConfigSuccess, object: nil)
     }
     
     @objc func showTranslateViewController() {
@@ -21,6 +22,10 @@ class AppTabBarController: UITabBarController {
             viewControllers?.insert(UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "translateVC"), at: 1)
             selectedIndex = 1
         }
+    }
+    
+    @objc func networkConfigSuccessAction() {
+        selectedIndex = 0
     }
 
 }
