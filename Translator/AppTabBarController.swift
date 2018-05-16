@@ -25,7 +25,9 @@ class AppTabBarController: UITabBarController {
     }
     
     @objc func networkConfigSuccessAction() {
-        selectedIndex = 0
+        DispatchQueue.main.async {
+            self.selectedIndex = 0
+        }
     }
 
 }

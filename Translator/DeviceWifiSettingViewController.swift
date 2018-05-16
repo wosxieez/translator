@@ -111,7 +111,6 @@ class DeviceWifiSettingViewController: UIViewController {
             if #available(iOS 11.0, *) {
                 // 开始配网提示
                 beganConfigDeviceWifiTip()
-                
                 let hotspotConfig = NEHotspotConfiguration(ssid: "tangdi", passphrase: "12345678", isWEP: false)
                 
                 NEHotspotConfigurationManager.shared.apply(hotspotConfig) { (error) in
@@ -121,7 +120,6 @@ class DeviceWifiSettingViewController: UIViewController {
                         self.endConfigDeviceWifiTip(result: false) // 结束配网提示
                     }
                 }
-                
             } else {
                 let ac = UIAlertController(title: "提示".localizable(),
                                            message: "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678",

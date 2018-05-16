@@ -78,11 +78,6 @@ class UserSettingViewController: UITableViewController {
         }
     }
     
-    func openPickerView() {
-        let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
-        present(alertController, animated: true, completion: nil)
-    }
-    
     @objc func headImageTapAction() {
         if isTimerRunning {
             headImageTapCount += 1
