@@ -79,6 +79,7 @@ class DeviceSettingViewController: UITableViewController {
                             if object["resultCode"] as? String == "00" {
                                 Toast.show(message: "设备删除成功".localizable())
                                 
+                                AppUtil.currentDevice = nil
                                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 self.navigationController?.popViewController(animated: true)
                             } else {

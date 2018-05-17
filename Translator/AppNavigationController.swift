@@ -129,7 +129,6 @@ class AppNavigationController: UINavigationController {
     }
     
     @objc func onMonitorTimerAction() {
-        print("网络监控时间到")
         if isLoggedIn, !tbSocketSession.isConnected {
             tbSocketSession.connect(host: AppUtil.socketServerHost, port: AppUtil.socketServerPort)
         }
@@ -222,9 +221,9 @@ extension AppNavigationController: TBSocketSessionDelegate {
                         cachedMessage = nil
                     }
                 case "1": // 登录失败,账号在其他地方登录
+                    NotificationCenter.default.post(name: AppNotification.AppLoout, object: nil)
                     DispatchQueue.main.async {
                         Toast.show(message: content["resultMsg"] as? String, delayCloseTime: 3)
-                        self.popViewController(animated: true)
                     }
                 default:
                     break

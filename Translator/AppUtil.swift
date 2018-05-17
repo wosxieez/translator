@@ -13,22 +13,17 @@ import SystemConfiguration.CaptiveNetwork
 class AppUtil {
     
     static var currentDevice: [String: Any]? {
-        
         didSet {
-            
             NotificationCenter.default.post(name: AppNotification.DidUpdateDeviceInfo, object: nil)
         }
     }
     
     /// http服务地址
     static var httpServerURL: String {
-        
         get {
-            
             if Bundle.main.infoDictionary?["UseDebugServer"] as? Int == 1 {
                 return "http://testbgt.tombot.com.cn:3989/"
             } else {
-                
                 return "http://42.159.245.82:8181/"
             }
         }

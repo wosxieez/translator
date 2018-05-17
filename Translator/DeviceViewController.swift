@@ -45,7 +45,7 @@ class DeviceViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        getBindingDeviceDetail()
+        updateDeviceInfo()
         NotificationCenter.default.post(name: AppNotification.CheckSocketStatus, object: nil)
     }
     
@@ -89,6 +89,7 @@ class DeviceViewController: UIViewController {
                             DispatchQueue.main.async {
                                 if deviceMessage["content"] as? String == "success" {
                                     Toast.show(message: "设置成功".localizable())
+                                    
                                     // 设备设置成功 需要重新更新下设备信息
                                     NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                                 } else {
@@ -114,6 +115,7 @@ class DeviceViewController: UIViewController {
                 }
             case "boundReplace":
                 // 设备102018000307461b绑定到其他APP用户,需要重新更新下设备信息
+                AppUtil.currentDevice = nil
                 NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                 DispatchQueue.main.async {
                     Toast.show(message: "设备已被其他用户绑定".localizable())
@@ -126,7 +128,7 @@ class DeviceViewController: UIViewController {
     
     @objc func needUpdateDeviceInfoAction() {
         // 设备绑定发生变化了 重新加载下设备明细
-        getBindingDeviceDetail()
+        updateDeviceInfo()
     }
     
     @objc func didUpdateDeviceInfoAction() {
@@ -262,7 +264,15 @@ class DeviceViewController: UIViewController {
     }
     
     /// 获取绑定设备的详细信息
-    func getBindingDeviceDetail() {
+    func updateDeviceInfo() {
+        if let device = AppUtil.currentDevice {
+            getDeviceInfo(device: device)
+        } else {
+            getDeviceList()
+        }
+    }
+    
+    private func getDeviceList() {
         AppService.getInstance().queryDeviceList { (data, response, error) in
             guard data != nil && error == nil else { return }
             
@@ -272,22 +282,26 @@ class DeviceViewController: UIViewController {
                         if let devList = object["devList"] as? [[String: Any]] {
                             if devList.count > 0 {
                                 if let device = devList.first {
-                                    AppService.getInstance().queryDeviceDetail(deviceNo: device["deviceNo"] as! String) { (data, response, error) in
-                                        guard data != nil && error == nil else { return }
-                                        
-                                        if let jsonObject = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) {
-                                            if let object = jsonObject as? [String: Any] {
-                                                if object["resultCode"] as? String == "0" {
-                                                    AppUtil.currentDevice = object
-                                                }
-                                            }
-                                        }
-                                    }
+                                    self.getDeviceInfo(device: device)
                                 }
                             } else {
                                 AppUtil.currentDevice = nil
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    
+    private func getDeviceInfo(device: [String: Any]) {
+        AppService.getInstance().queryDeviceDetail(deviceNo: device["deviceNo"] as! String) { (data, response, error) in
+            guard data != nil && error == nil else { return }
+            
+            if let jsonObject = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableLeaves) {
+                if let object = jsonObject as? [String: Any] {
+                    if object["resultCode"] as? String == "0" {
+                        AppUtil.currentDevice = object
                     }
                 }
             }

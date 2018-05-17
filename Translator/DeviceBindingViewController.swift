@@ -77,7 +77,7 @@ class DeviceBindingViewController: UIViewController {
                     DispatchQueue.main.async {
                         switch resultCode {
                         case "00":
-                            // 派发设备绑定发送变化通知并切换到设备界面
+                            AppUtil.currentDevice = nil
                             NotificationCenter.default.post(name: AppNotification.NeedUpdateDeviceInfo, object: nil)
                             self.navigationController?.popToRootViewController(animated: true)
                             Toast.show(message: "绑定成功".localizable())
