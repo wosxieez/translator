@@ -52,7 +52,7 @@ class DeviceWifiSettingViewController: UIViewController {
         eyeImageView.isUserInteractionEnabled = true
         passwordTextField.rightView!.addSubview(eyeImageView)
         
-        commitButton.layer.cornerRadius = 22
+        commitButton.layer.cornerRadius = 25
         
         if let wifiHistory = UserDefaults.standard.value(forKey: "wifiHistory2") as? [[String: String]] {
             ssidTextFiled.text = wifiHistory.last?["ssid"]

@@ -26,7 +26,7 @@
 /* Class = "UILabel"; text = "步骤1: 点击设备联网，帮助您的百国通连接网络"; ObjectID = "LTY-5s-0bB"; */
 "LTY-5s-0bB.text" = "点击设备联网， 帮助您的翻译机连接网络";
 
-"JjK-Rb-SRE.text" = "如果选择本机热点， 请在联网后查看热点是否开启，若开启失败，请手动打开热点";
+"pHt-mR-bXP.text" = "如果选择本机热点， 请在联网后查看热点是否开启，若开启失败，请手动打开热点";
 
 /* Class = "UITabBarItem"; title = "设备"; ObjectID = "Occ-eU-0zh"; */
 "Occ-eU-0zh.title" = "设备";
@@ -59,7 +59,7 @@
 "qZu-L8-OAL.normalTitle" = "中文";
 
 /* Class = "UILabel"; text = "请长按设备左侧键，听到提示后输入密码"; ObjectID = "r2M-w4-77Z"; */
-"r2M-w4-77Z.text" = "请长按翻译器左侧按键，听到提示后输入密码";
+"HKf-hN-Ngs.text" = "请长按翻译器左侧按键，听到提示后输入密码";
 
 /* Class = "UILabel"; text = "录音时长"; ObjectID = "sOk-CB-xa7"; */
 "sOk-CB-xa7.text" = "录音时长";
