@@ -29,7 +29,7 @@
 "确定要删除当前设备吗？" = "Delete current device？";
 "设备删除成功" = "Delete success";
 "设备删除失败" = "Delete failure";
-"分钟" = "m";
+"分钟" = "min";
 "秒" = "s";
 "待机时间" = "Standby time";
 "录音时长" = "Recording time";
@@ -177,3 +177,5 @@
 "设备不存在" = " the devide doesn't exist";
 
 "网络配置中...请稍后再试" = "Network configuration...try later";
+
+"删除" = "Delete";

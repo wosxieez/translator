@@ -16,6 +16,7 @@ class DeviceSettingViewController: UITableViewController {
     @IBOutlet weak var shutdownTimeCell: UITableViewCell!
     @IBOutlet weak var standbyTimeCell: UITableViewCell!
     @IBOutlet weak var deviceVersionCell: UITableViewCell!
+    var alertController: UIAlertController?
     
     let imageView = UIImageView(image: UIImage(named: "deviceUpdateAvailable"))
     
@@ -50,6 +51,7 @@ class DeviceSettingViewController: UITableViewController {
         super.viewWillDisappear(animated)
         
         view.isUserInteractionEnabled = false
+        alertController?.dismiss(animated: false, completion: nil)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,9 +70,9 @@ class DeviceSettingViewController: UITableViewController {
         case 3:
             noticeDeviceUpdate()
         case 4:
-            let alertController = UIAlertController(title: "提示".localizable(), message: "确定要删除当前设备吗？".localizable(), preferredStyle: .actionSheet)
-            alertController.addAction(UIAlertAction(title: "取消".localizable(), style: .cancel, handler: nil))
-            alertController.addAction(UIAlertAction(title: "确定".localizable(), style: .destructive, handler: { (action) in
+            alertController = UIAlertController(title: "提示".localizable(), message: "确定要删除当前设备吗？".localizable(), preferredStyle: .actionSheet)
+            alertController!.addAction(UIAlertAction(title: "取消".localizable(), style: .cancel, handler: nil))
+            alertController!.addAction(UIAlertAction(title: "删除".localizable(), style: .destructive, handler: { (action) in
                 AppService.getInstance().deleteDevice(deviceNo: AppUtil.currentDevice?["deviceNo"] as? String, completionHandler: { (data, response, error) in
                     guard data != nil && error == nil else { return }
                     
@@ -89,8 +91,7 @@ class DeviceSettingViewController: UITableViewController {
                     }
                 })
             }))
-            
-            present(alertController, animated: true, completion: nil)
+            present(alertController!, animated: true, completion: nil)
         default:
             break
         }
