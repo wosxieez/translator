@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		017B5429005E5FF55BCBF1A9 /* Pods_Translator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61A168902975FD1B3707D9 /* Pods_Translator.framework */; };
-		CC08C512206111660055F329 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C510206111660055F329 /* male.png */; };
-		CC08C513206111660055F329 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = CC08C511206111660055F329 /* female.png */; };
 		CC14D2DC209D576C005B37BA /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14D2DB209D576C005B37BA /* Localizable.swift */; };
 		CC1877D6204CDF2500495412 /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */; };
 		CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CC1877D7204CE52400495412 /* add_device_top_bg.png */; };
@@ -97,6 +95,8 @@
 		CCF3AD501FB30A1F00C9EBCA /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF3AD4F1FB30A1F00C9EBCA /* FavoriteViewController.swift */; };
 		CCF67F5F206DD23D009CFB4C /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF67F5E206DD23D009CFB4C /* DeviceListViewController.swift */; };
 		CCF67F65206E0A8A009CFB4C /* DeviceSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF67F64206E0A8A009CFB4C /* DeviceSettingTableViewController.swift */; };
+		CCFAE79D20B2C978008AE797 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFAE79F20B2C978008AE797 /* female.png */; };
+		CCFAE7A120B2CA22008AE797 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFAE7A320B2CA22008AE797 /* male.png */; };
 		CCFEFCDA205524E700534AF5 /* DeviceBindingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFEFCD9205524E700534AF5 /* DeviceBindingViewController.swift */; };
 		CCFEFCE6205530C600534AF5 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFEFCE5205530C600534AF5 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
@@ -118,8 +118,6 @@
 		5E7A1D622DB40C8075F963C3 /* Pods-Translator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translator.release.xcconfig"; path = "Pods/Target Support Files/Pods-Translator/Pods-Translator.release.xcconfig"; sourceTree = "<group>"; };
 		95B927EBFD65FA04A762E87D /* Pods-Translator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Translator/Pods-Translator.debug.xcconfig"; sourceTree = "<group>"; };
 		CA61A168902975FD1B3707D9 /* Pods_Translator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC08C510206111660055F329 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
-		CC08C511206111660055F329 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
 		CC14D2DB209D576C005B37BA /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		CC1877D5204CDF2500495412 /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		CC1877D7204CE52400495412 /* add_device_top_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_device_top_bg.png; sourceTree = "<group>"; };
@@ -240,6 +238,10 @@
 		CCF3AD4F1FB30A1F00C9EBCA /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		CCF67F5E206DD23D009CFB4C /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		CCF67F64206E0A8A009CFB4C /* DeviceSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceSettingTableViewController.swift; sourceTree = "<group>"; };
+		CCFAE79E20B2C978008AE797 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/female.png; sourceTree = "<group>"; };
+		CCFAE7A020B2C97C008AE797 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/female.png"; sourceTree = "<group>"; };
+		CCFAE7A220B2CA22008AE797 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/male.png; sourceTree = "<group>"; };
+		CCFAE7A420B2CA27008AE797 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "zh-Hans.lproj/male.png"; sourceTree = "<group>"; };
 		CCFEFCD9205524E700534AF5 /* DeviceBindingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceBindingViewController.swift; sourceTree = "<group>"; };
 		CCFEFCE5205530C600534AF5 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -364,8 +366,8 @@
 			children = (
 				CC8AD34A20622D5F00459311 /* gender_selected.png */,
 				CC8AD34920622D5F00459311 /* gender_unselected.png */,
-				CC08C511206111660055F329 /* female.png */,
-				CC08C510206111660055F329 /* male.png */,
+				CCFAE79F20B2C978008AE797 /* female.png */,
+				CCFAE7A320B2CA22008AE797 /* male.png */,
 				CCF21B99207C9CE500F3CD36 /* device_top_icon_online.png */,
 				CCF21B9B207C9CFD00F3CD36 /* device_top_icon_offline.png */,
 				CCC3C877204F93D200BD670B /* device_top_bg.png */,
@@ -621,11 +623,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC56891120A529EA00A3A861 /* FindPassword.storyboard in Resources */,
-				CC08C512206111660055F329 /* male.png in Resources */,
+				CCFAE7A120B2CA22008AE797 /* male.png in Resources */,
 				CC1877D8204CE52400495412 /* add_device_top_bg.png in Resources */,
 				CC2A56EE2054FD3300875B4D /* device_wifi_top_icon.png in Resources */,
 				CC94F2F21F7DFA1600C70786 /* Main.storyboard in Resources */,
-				CC08C513206111660055F329 /* female.png in Resources */,
+				CCFAE79D20B2C978008AE797 /* female.png in Resources */,
 				CC43DC30209C410000D46E25 /* UserSetting.storyboard in Resources */,
 				CC44AFEC20A2C48200C49798 /* LaunchScreen.storyboard in Resources */,
 				CCF21B9A207C9CE500F3CD36 /* device_top_icon_online.png in Resources */,
@@ -841,6 +843,24 @@
 			);
 			name = Main.storyboard;
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		CCFAE79F20B2C978008AE797 /* female.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCFAE79E20B2C978008AE797 /* en */,
+				CCFAE7A020B2C97C008AE797 /* zh-Hans */,
+			);
+			name = female.png;
+			sourceTree = "<group>";
+		};
+		CCFAE7A320B2CA22008AE797 /* male.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCFAE7A220B2CA22008AE797 /* en */,
+				CCFAE7A420B2CA27008AE797 /* zh-Hans */,
+			);
+			name = male.png;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
