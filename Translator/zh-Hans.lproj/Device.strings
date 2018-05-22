@@ -6,7 +6,7 @@
 "6SI-k7-bl0.text" = "待机时长";
 
 /* Class = "UIButton"; normalTitle = "确定"; ObjectID = "6k0-6d-olZ"; */
-"6k0-6d-olZ.normalTitle" = "确定";
+"ZCs-8W-9YH.normalTitle" = "确定";
 
 /* Class = "UIButton"; normalTitle = "设备绑定"; ObjectID = "7s5-1i-L7W"; */
 "7s5-1i-L7W.normalTitle" = "设备绑定";
@@ -41,7 +41,7 @@
 "TZg-eZ-4sw.text" = "如需绑定已联网设备， 请按设备绑定按键";
 
 /* Class = "UILabel"; text = "设备联网"; ObjectID = "XWp-pY-dRm"; */
-"XWp-pY-dRm.text" = "设备联网";
+"W9Q-LH-G6P.text" = "设备联网";
 
 /* Class = "UILabel"; text = "版本信息"; ObjectID = "Zxj-SJ-6Gh"; */
 "Zxj-SJ-6Gh.text" = "版本信息";

@@ -259,17 +259,13 @@ class DeviceViewController: UIViewController {
     
     @IBAction func switchDeviceAction(_ send: Any) {
         if AppUtil.currentDevice != nil {
-             present(UINavigationController(rootViewController: DeviceListViewController()), animated: true, completion: nil)
+            present(UINavigationController(rootViewController: DeviceListViewController()), animated: true, completion: nil)
         }
     }
     
     /// 获取绑定设备的详细信息
     func updateDeviceInfo() {
-        if let device = AppUtil.currentDevice {
-            getDeviceInfo(device: device)
-        } else {
-            getDeviceList()
-        }
+        getDeviceList()
     }
     
     private func getDeviceList() {
@@ -281,6 +277,12 @@ class DeviceViewController: UIViewController {
                     if object["resultCode"] as? String == "00" {
                         if let devList = object["devList"] as? [[String: Any]] {
                             if devList.count > 0 {
+                                for itemDevice in devList {
+                                    if (itemDevice["deviceNo"] as? String) == (AppUtil.currentDevice?["deviceNo"] as? String) {
+                                        self.getDeviceInfo(device: itemDevice)
+                                        return
+                                    }
+                                }
                                 if let device = devList.first {
                                     self.getDeviceInfo(device: device)
                                 }

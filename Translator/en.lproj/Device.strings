@@ -6,7 +6,7 @@
 "6SI-k7-bl0.text" = "Standby time";
 
 /* Class = "UIButton"; normalTitle = "确定"; ObjectID = "6k0-6d-olZ"; */
-"6k0-6d-olZ.normalTitle" = "Ok";
+"ZCs-8W-9YH.normalTitle" = "Comfirm";
 
 /* Class = "UIButton"; normalTitle = "设备绑定"; ObjectID = "7s5-1i-L7W"; */
 "7s5-1i-L7W.normalTitle" = "Device binding";
@@ -42,7 +42,7 @@
 "TZg-eZ-4sw.text" = "To bind a networked device, press the device binding button";
 
 /* Class = "UILabel"; text = "设备联网"; ObjectID = "XWp-pY-dRm"; */
-"XWp-pY-dRm.text" = "Device networking";
+"W9Q-LH-G6P.text" = "Device networking";
 
 /* Class = "UILabel"; text = "版本信息"; ObjectID = "Zxj-SJ-6Gh"; */
 "Zxj-SJ-6Gh.text" = "Version";

@@ -43,14 +43,14 @@ class ChangePasswordViewController: UIViewController {
         
         if (!AppUtil.isPassword(value: newPasswordInput1.text))
         {
-            Toast.show(message: "请输入6-18位字母数字组合的密码");
+            Toast.show(message: "请输入6-18位字符密码");
             return;
         }
         
         if (newPasswordInput1.text != newPasswordInput2.text)
         {
             // 提示新密码不匹配
-            Toast.show(message: "两次输入的密码不匹配");
+            Toast.show(message: "两次输入的密码不一致");
             return;
         }
         

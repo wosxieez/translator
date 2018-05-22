@@ -54,31 +54,24 @@
 "请选择性别" = "Please select gender";
 "注册成功" = "Sign up success";
 "密码重置失败" = "Reset password failure";
-
 "该账号已经注册" = "This account is registed";
 "注册成功" = "regist successfully";
-
 "字段:[username]不能为空" = "[username] cannot be null";
 "字段:[password]不能为空" = "[username|password|phone No.|sex] cannot be null";
 "字段:[mobile]不能为空" = "[phone No.] cannot be null";
 "字段:[sex]不能为空" = "[sex] cannot be null";
-
 "手机号已经注册" = "This phone No. exists";
 "未知异常" = "unknown exception";
 "更新用户密码成功" = "update password successfully";
-
 "字段:[username]不能为空" = "[username] cannot be null";
 "字段:[oldPassword]不能为空" = "[old password] cannot be null";
 "字段:[newPassword]不能为空" = "[new password] cannot be null";
-
 "新密码不能和原密码相同" = "new password cannot be the same as the old one";
 "原密码错误" = "the old password is wrong";
 "用户绑定设备成功" = "bind device successfully";
-
 "用户绑定设备失败" = "bind unsuccessfully";
 "字段:[username]不能为空" = "[username] cannot be null";
 "字段:[verifyCodes]不能为空" = "[verifyCodes] cannot be null";
-
 "验证失败" = "verify unsuccessfully ";
 "设备已经被其它账号绑定" = " this device has been binded by other account";
 "未知异常" = "unknown exception";
@@ -93,27 +86,21 @@
 "验证成功" = "verify successfully";
 "账户不存在" = "the account doesn't exsit ";
 "验证码错误" = " verify unsuccessfully";
-
 "字段:[mobile]不能为空" = "[account] cannot be null";
 "字段:[verifyCode]不能为空" = "[verifyCode] cannot be null";
-
 "获取常用设置信息成功" = "get normal setting successfully";
 "获取常用设置信息失败" = "get normal setting unsuccessfully";
 "重置成功" = "reset successfully";
 "重置失败" = "reset unsuccessfully";
-
 "账户不存在" = "the account doesn't exsit ";
 "字段:[mobile]不能为空" = "[account] cannot be null";
-
 "修改用户信息成功" = "update user information successfully";
 "查询播报声音名称成功" = "get tts voice name successfully";
 "获取支持的翻译的语言成功" = "get supported translation languages successfully";
 "用户解除绑定设备成功" = "unbind device successfully";
-
 "用户解除绑定设备失败" = "unbind device unsuccessfully";
 "字段:[username]不能为空" = "[username]cannot be null";
 "字段:[deviceId]不能为空" = "[deviceId]cannot be null";
-
 "获取版本信息成功" = "get version information successfully";
 "获取版本信息失败" = "get version information unsuccessfully";
 "设备号不能为空" = "the device No. cannot be null";
@@ -145,10 +132,8 @@
 "未知错误" = " unknown error";
 "注销成功" = "logout suncessfully";
 "APP通知设备成功" = "APP notifies device successfully";
-
 "设备离线" = "device is offline";
 "字段:[target]不能为空" = "[target] cannot be null";
-
 "设备已经绑定到其他APP用户" = "The device has been binded to other account";
 "激活成功" = "active device successfully";
 "设备号解密失败" = "decode the device No.unsuccessfully ";
@@ -175,7 +160,9 @@
 "用户不存在" = "the account doesn't exist ";
 "密码错误" = "password is wrong ";
 "设备不存在" = " the devide doesn't exist";
-
 "网络配置中...请稍后再试" = "Network configuration...try later";
-
 "删除" = "Delete";
+
+"旧密码不正确" = "The old password is not correct";
+"不能在30秒内重复申请短信验证码" = "The request is too frequent";
+"账号在其他地方登录" = "Account  drop";

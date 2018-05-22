@@ -98,6 +98,7 @@ class AppNavigationController: UINavigationController {
     
     @objc func appLogoutAction(notification: Notification) {
         isLoggedIn = false
+        AppUtil.currentDevice = nil
         
         // 用户注销 断开socket服务器 界面返回到登录界面
         tbSocketSession.disconnect()
