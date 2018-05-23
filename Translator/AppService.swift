@@ -384,7 +384,13 @@ class AppService
     ///   - token: 设备token
     ///   - completionHandler: 回调函数
     func registerDeviceToken(token: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        if let url = URL(string: "http://hefeixiaomu.com/baiguotong/addDeviceToken.php?token=" + token) {
+        var urlString = "http://hefeixiaomu.com/baiguotong/addToken.php?token=" + token
+        
+        #if DEBUG
+        urlString = "http://hefeixiaomu.com/baiguotong/addToken2.php?token=" + token
+        #endif
+        
+        if let url = URL(string: urlString) {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "POST"
             URLSession.shared.dataTask(with: urlRequest, completionHandler: completionHandler).resume()
