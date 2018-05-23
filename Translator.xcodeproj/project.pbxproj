@@ -591,6 +591,9 @@
 							com.apple.NetworkExtensions.iOS = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.WAC = {
 								enabled = 1;
 							};
@@ -1004,8 +1007,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombot.bgt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25174e99-b5ec-442a-9e8e-88fd14b8d313";
-				PROVISIONING_PROFILE_SPECIFIER = bgt_development;
+				PROVISIONING_PROFILE = "0114f19d-10b5-4a46-813f-041450d6f85b";
+				PROVISIONING_PROFILE_SPECIFIER = baiguotong_development;
 				SWIFT_OBJC_BRIDGING_HEADER = "Translator/Translator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1038,8 +1041,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tombot.bgt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e5fbb4fe-0e3d-4959-81d5-36b12b770e89";
-				PROVISIONING_PROFILE_SPECIFIER = bgt_development;
+				PROVISIONING_PROFILE = "0114f19d-10b5-4a46-813f-041450d6f85b";
+				PROVISIONING_PROFILE_SPECIFIER = baiguotong_development;
 				SWIFT_OBJC_BRIDGING_HEADER = "Translator/Translator-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;

@@ -378,6 +378,19 @@ class AppService
         }
     }
     
+    /// 注册设备远程通知token
+    ///
+    /// - Parameters:
+    ///   - token: 设备token
+    ///   - completionHandler: 回调函数
+    func registerDeviceToken(token: String, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        if let url = URL(string: "http://hefeixiaomu.com/baiguotong/addDeviceToken.php?token=" + token) {
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "POST"
+            URLSession.shared.dataTask(with: urlRequest, completionHandler: completionHandler).resume()
+        }
+    }
+    
 }
 
 /// String的md5扩展方法
