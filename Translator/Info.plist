@@ -39,10 +39,6 @@
 	<string>语音翻译功能需要访问您的麦克风</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>图片翻译功能需要访问您的相册</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>audio</string>
-	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
