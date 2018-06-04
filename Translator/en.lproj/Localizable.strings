@@ -37,8 +37,9 @@
 "选择语言" = "Select language";
 "请先连接设备WIFI\rssid: tangdi\rpassword: 12345678" = "Pelease connect WIFI\rssid: tangdi\rpassword: 12345678";
 "正在配网..." = "Configure network...";
-"配网成功" = "Configure network success";
-"配网失败" = "Configure network failure";
+"配置成功，请打开手机热点" = "Success，Please open the hotspot";
+"配置成功" = "Configure network success";
+"配置失败" = "Configure network failure";
 "选取网络" = "Select network";
 "历史网络" = "History network";
 "选择网络" = "Select network";

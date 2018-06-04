@@ -145,21 +145,18 @@ class DeviceWifiSettingViewController: UIViewController {
     func endConfigDeviceWifiTip(result: Bool) {
         DispatchQueue.main.async {
             if result {
-                self.toast?.close()
-                self.perform(#selector(self.doSuccessToastAction), with: nil, afterDelay: 5)
-//                NotificationCenter.default.post(name: AppNotification.NetworkConfigBegan, object: nil)
+                if self.ssidTextFiled.text == AppUtil.getSSID() {
+                    self.toast?.open(message: "配置成功，请打开手机热点", delayCloseTime: 3)
+                } else {
+                    self.toast?.open(message: "配置成功", delayCloseTime: 3)
+                }
                 self.saveWifiHistory()
             } else {
-                self.toast?.open(message: "配网失败".localizable(), delayCloseTime: 3)
+                self.toast?.open(message: "配置失败", delayCloseTime: 3)
             }
             self.commitButton.isEnabled = true
             self.commitButton.alpha = 1
         }
-    }
-    
-    @objc func doSuccessToastAction() {
-//        self.toast?.open(message: "配网成功".localizable(), delayCloseTime: 3)
-        Toast.show(message: "配网成功", delayCloseTime: 3)
     }
     
     /// 准备配置网络
