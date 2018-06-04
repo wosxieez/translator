@@ -145,7 +145,7 @@ class DeviceWifiSettingViewController: UIViewController {
     func endConfigDeviceWifiTip(result: Bool) {
         DispatchQueue.main.async {
             if result {
-                if self.ssidTextFiled.text == AppUtil.getSSID() {
+                if self.ssidTextFiled.text == UIDevice.current.name {
                     self.toast?.open(message: "配置成功，请打开手机热点", delayCloseTime: 3)
                 } else {
                     self.toast?.open(message: "配置成功", delayCloseTime: 3)
