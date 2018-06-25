@@ -1,0 +1,24 @@
+PODS:
+  - IQKeyboardManagerSwift (6.0.2)
+  - ReachabilitySwift (4.1.0)
+  - Starscream (3.0.5)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - ReachabilitySwift
+  - Starscream
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManagerSwift
+    - ReachabilitySwift
+    - Starscream
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 59d4b0e140bc546c3c76ae5bb35b3dafd10b8172
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
+  Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+
+PODFILE CHECKSUM: 214234e2394602aa04221a51f9f70d28c2822900
+
+COCOAPODS: 1.5.0

@@ -4,6 +4,474 @@
    <FileRef
       location = "group:Translator.xcodeproj">
    </FileRef>
+   <Group
+      location = "group:Translator"
+      name = "Translator">
+      <FileRef
+         location = "group:Translator/Translator.entitlements">
+      </FileRef>
+      <Group
+         location = "group:Translator/Base.lproj"
+         name = "Main.storyboard">
+         <FileRef
+            location = "group:Translator/Base.lproj/Main.storyboard">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/Base.lproj/../en.lproj/Main.strings">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/Base.lproj/../zh-Hans.lproj/Main.strings">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Translator/LaunchScreen.storyboard">
+      </FileRef>
+      <FileRef
+         location = "group:Translator/AppDelegate.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Translator/AppNavigationController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Translator/AppTabBarController.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Translator/Translator-Bridging-Header.h">
+      </FileRef>
+      <FileRef
+         location = "group:Translator/Info.plist">
+      </FileRef>
+      <Group
+         location = "group:Translator"
+         name = "InfoPlist.strings">
+         <FileRef
+            location = "group:Translator/zh-Hans.lproj/InfoPlist.strings">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/en.lproj/InfoPlist.strings">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Localizable.strings">
+         <FileRef
+            location = "group:Translator/en.lproj/Localizable.strings">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/zh-Hans.lproj/Localizable.strings">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Translator/Assets.xcassets">
+      </FileRef>
+      <Group
+         location = "group:Translator"
+         name = "Core">
+         <FileRef
+            location = "group:Translator/Message.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/Toast.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TBSocketSession.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/AppService.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/AppUtil.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/AppNotification.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/Localizable.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Login">
+         <Group
+            location = "group:Translator"
+            name = "Register.storyboard">
+            <FileRef
+               location = "group:Translator/Base.lproj/Register.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/en.lproj/Register.strings">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/Register.strings">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "FindPassword.storyboard">
+            <FileRef
+               location = "group:Translator/Base.lproj/FindPassword.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/en.lproj/FindPassword.strings">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/FindPassword.strings">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Translator/LoginViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/RegisterViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SetPasswordViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SelectGenderViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/FindPasswordViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SetNewPasswordViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Device">
+         <Group
+            location = "group:Translator"
+            name = "Device.storyboard">
+            <FileRef
+               location = "group:Translator/Base.lproj/Device.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/en.lproj/Device.strings">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/Device.strings">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Translator/DeviceViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceListViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceSettingViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceSettingTableViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceLanguageViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/AddDeviceViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceWifiSettingViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceWifiListViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/DeviceBindingViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "UserSetting">
+         <Group
+            location = "group:Translator"
+            name = "UserSetting.storyboard">
+            <FileRef
+               location = "group:Translator/en.lproj/UserSetting.strings">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/Base.lproj/UserSetting.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/UserSetting.strings">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Translator/UserSettingViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/ChangePasswordViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/AboutMeViewController.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Translate">
+         <FileRef
+            location = "group:Translator/TranslateViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SettingTableViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/Language.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateView1Controller.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateView1.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateView2Controller.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateTableViewCell.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateTableViewCell.xib">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslteTableViewCell2.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslteTableViewCell2.xib">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateView3Controller.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/CaptureOverView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SourceLanguageSettingViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TargetLanguageSettingViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SpeechToken.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SpeechSourceToTarget.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SpeechTargetToSource.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/MicrosoftSpeechService.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/SpeechRecognition.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/TranslateView4Controller.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Favorite">
+         <FileRef
+            location = "group:Translator/FavoriteViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/FavoriteCollectionViewCell.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Program">
+         <FileRef
+            location = "group:Translator/ProgramViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/ProgramCollectionViewCell.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator/Base.lproj"
+         name = "Base.lproj">
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "SmartConfig">
+         <Group
+            location = "group:Translator"
+            name = "esptouch">
+            <FileRef
+               location = "group:Translator/ESPTouchDelegate.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchResult.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchTask.h">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "task">
+            <FileRef
+               location = "group:Translator/ESPTouchResult.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchTask.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchTaskParameter.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchTaskParameter.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "udp">
+            <FileRef
+               location = "group:Translator/ESPUDPSocketClient.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPUDPSocketClient.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPUDPSocketServer.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPUDPSocketServer.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "protocol">
+            <FileRef
+               location = "group:Translator/ESPDataCode.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPDataCode.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPDatumCode.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPDatumCode.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPGuideCode.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPGuideCode.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchGenerator.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPTouchGenerator.m">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "util">
+            <FileRef
+               location = "group:Translator/ESP_ByteUtil.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_ByteUtil.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_CRC8.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_CRC8.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_NetUtil.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_NetUtil.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_WifiUtil.h">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESP_WifiUtil.m">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/ESPVersionMacro.h">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "GCDSocket">
+         <FileRef
+            location = "group:Translator/GCDAsyncSocket.h">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/GCDAsyncSocket.m">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Translator"
+         name = "Resources">
+         <FileRef
+            location = "group:Translator/gender_selected.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/gender_unselected.png">
+         </FileRef>
+         <Group
+            location = "group:Translator"
+            name = "female.png">
+            <FileRef
+               location = "group:Translator/en.lproj/female.png">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/female.png">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:Translator"
+            name = "male.png">
+            <FileRef
+               location = "group:Translator/en.lproj/male.png">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/male.png">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Translator/device_top_icon_online.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/device_top_icon_offline.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/device_top_bg.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/add_device_top_bg.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/device_wifi_top_icon.png">
+         </FileRef>
+         <FileRef
+            location = "group:Translator/device_wifi_clear.png">
+         </FileRef>
+         <Group
+            location = "group:Translator"
+            name = "device_binding_top_bg.png">
+            <FileRef
+               location = "group:Translator/en.lproj/device_binding_top_bg.png">
+            </FileRef>
+            <FileRef
+               location = "group:Translator/zh-Hans.lproj/device_binding_top_bg.png">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
